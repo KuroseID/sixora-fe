@@ -27,17 +27,15 @@ export default function LogoCarousel() {
           {marqueeLogos.map((logo, idx) => (
             <div
               key={`${logo.id}-${idx}`}
-              className="relative flex-shrink-0 h-24 w-24 sm:w-24 sm:h-28 cursor-pointer transition-all duration-300 hover:scale-108 hover:-translate-y-1 active:scale-95 group/item flex items-center justify-center p-3"
+              className="relative flex-shrink-0 h-16 sm:h-20 cursor-pointer transition-all duration-300 hover:scale-125 hover:-translate-y-1 active:scale-95 group/item flex items-center justify-center px-2"
             >
-              <div className="relative w-full h-full">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  fill
-                  sizes="(max-width: 640px) 96px, 112px"
-                  className="object-contain group-hover/item:rotate-2 transition-transform duration-300"
-                />
-              </div>
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={200}
+                height={80}
+                className="h-12 sm:h-16 w-auto object-contain group-hover/item:rotate-2 transition-transform duration-300"
+              />
             </div>
           ))}
         </div>
