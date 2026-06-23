@@ -95,15 +95,30 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center relative z-10 gap-16">
 
-            <div className="lg:col-span-7 flex justify-center lg:justify-start relative w-full">
-              <Image
-                src="/about-image.webp"
-                alt="SMK Negeri 6 Jember"
-                height={576}
-                width={681}
-                priority
-                className="w-full h-auto object-contain max-w-[680px]"
-              />
+            <div className="lg:col-span-7 flex justify-center lg:justify-start w-full">
+              <div className="relative w-full max-w-[680px]">
+                <Image
+                  src="/about-image.webp"
+                  alt="SMK Negeri 6 Jember"
+                  height={576}
+                  width={681}
+                  priority
+                  className="w-full h-auto object-contain"
+                />
+
+                {/* Interactive Play Button */}
+                <a
+                  href="https://www.youtube.com/@smknegeri6jember"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-14 h-14 sm:w-[72px] sm:h-[72px] bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-[#50b0ea] z-20 group"
+                >
+                  <svg width="129" height="129" viewBox="0 0 129 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5.96956e-08" width="129" height="129" rx="64.5" fill="#65C4FF" />
+                    <path d="M97.8234 55.1252C99.5244 56.0298 100.947 57.3802 101.94 59.0316C102.932 60.6831 103.456 62.5734 103.456 64.5C103.456 66.4266 102.932 68.317 101.94 69.9684C100.947 71.6199 99.5244 72.9702 97.8234 73.8748L52.4475 98.5496C45.1411 102.527 36.1665 97.3561 36.1665 89.1784L36.1665 39.8252C36.1665 31.644 45.1411 26.4767 52.4475 30.4469L97.8234 55.1252Z" fill="white" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
             <div className="lg:col-span-5 flex flex-col items-start text-left relative">
