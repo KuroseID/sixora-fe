@@ -78,34 +78,61 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Panel */}
-      <div
-        className={`${isOpen ? "block opacity-100 translate-y-0" : "hidden opacity-0 -translate-y-2"
-          } lg:hidden border-t border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950 transition-all duration-300 ease-out`}
-        id="mobile-menu"
-      >
-        <div className="px-4 pt-4 pb-6 space-y-3">
-          {navItems.map((item, index) => (
-            <Link
-              key={index}
-              href={item.href}
-              className="block px-3 py-2 rounded-lg text-base font-bold text-zinc-900 dark:text-zinc-100 hover:text-primary dark:hover:text-primary hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.label}
+      {/* Mobile Drawer (Overlay & Sidebar) */}
+      <div className="lg:hidden">
+        {/* Backdrop overlay */}
+        <div
+          className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-50 transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
+          onClick={() => setIsOpen(false)}
+        />
+
+        {/* Drawer panel sliding from right */}
+        <div
+          className={`fixed top-0 right-0 bottom-0 w-[300px] max-w-[85vw] bg-white dark:bg-zinc-950 shadow-2xl border-l border-zinc-100 dark:border-zinc-900 z-50 transition-transform duration-300 ease-out transform ${isOpen ? "translate-x-0" : "translate-x-full"
+            } flex flex-col`}
+        >
+          {/* Drawer Header */}
+          <div className="flex justify-between items-center h-16 px-6 border-b border-zinc-100 dark:border-zinc-900">
+            <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
+              <span className="text-lg tracking-tight text-zinc-900 dark:text-white">
+                MANA LOGO NYA
+              </span>
             </Link>
-          ))}
-          <div className="pt-4 border-t border-zinc-100 dark:border-zinc-900 flex flex-col gap-3 px-3">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="p-2 rounded-lg text-zinc-600 dark:text-zinc-300 hover:text-primary dark:hover:text-primary hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors"
+            >
+              <X className="h-6 w-6" strokeWidth={2.5} />
+            </button>
+          </div>
+
+          {/* Drawer Links */}
+          <div className="flex-1 overflow-y-auto py-6 px-6 space-y-4">
+            {navItems.map((item, index) => (
+              <Link
+                key={index}
+                href={item.href}
+                className="block py-2 text-lg font-bold text-zinc-900 dark:text-zinc-100 hover:text-primary dark:hover:text-primary transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Drawer Footer Actions */}
+          <div className="p-6 border-t border-zinc-100 dark:border-zinc-900 flex flex-col gap-3">
             <Link
               href="/login"
-              className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3 rounded-xl transition-all active:scale-[0.98] text-center"
+              className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3.5 rounded-xl transition-all active:scale-[0.98] text-center shadow-md shadow-primary/10"
               onClick={() => setIsOpen(false)}
             >
               Login
             </Link>
             <Link
               href="/register"
-              className="w-full border-2 border-primary text-primary hover:bg-primary/5 font-bold py-3 rounded-xl transition-all active:scale-[0.98] text-center"
+              className="w-full border-2 border-primary text-primary hover:bg-primary/5 font-bold py-3.5 rounded-xl transition-all active:scale-[0.98] text-center"
               onClick={() => setIsOpen(false)}
             >
               Register
