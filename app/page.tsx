@@ -87,7 +87,60 @@ export default function Home() {
           </div>
         </main>
       </div>
+
       <LogoCarousel />
+
+      <div className="relative overflow-hidden bg-primary/5 w-full">
+        <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24">
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center relative z-10 gap-16">
+
+            <div className="lg:col-span-7 flex justify-center lg:justify-start relative w-full">
+              <Image
+                src="/about-image.webp"
+                alt="SMK Negeri 6 Jember"
+                height={576}
+                width={681}
+                priority
+                className="w-full h-auto object-contain max-w-[680px]"
+              />
+            </div>
+
+            <div className="lg:col-span-5 flex flex-col items-start text-left relative">
+              {/* Badge */}
+              <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
+                Profile Sekolah
+              </div>
+
+              {/* Title with decorative triangle */}
+              <div className="relative">
+                <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-[1.5] font-bold">
+                  Mengenal <br />
+                  <span className="text-primary font-black font-bold">SMKN 6 JEMBER</span>
+                </h2>
+
+                {/* Decorative Triangle SVG */}
+                <div className="absolute -top-3 left-[220px] sm:left-[265px] w-12 h-12 pointer-events-none select-none opacity-40">
+                  <svg
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-full h-full stroke-primary stroke-[1.5] rotate-[25deg]"
+                  >
+                    <polygon points="32,8 56,52 8,52" />
+                  </svg>
+                </div>
+              </div>
+
+              <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-xl leading-relaxed">
+                Sekolah kami berkomitmen untuk memberikan pendidikan berkualitas yang mengintegrasikan ilmu pengetahuan, teknologi, dan nilai-nilai karakter. Dengan didukung tenaga pendidik profesional, fasilitas yang memadai, serta lingkungan belajar yang kondusif.
+              </p>
+            </div>
+
+
+          </div>
+        </main>
+      </div>
     </div>
   );
 }
