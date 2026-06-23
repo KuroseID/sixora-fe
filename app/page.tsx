@@ -8,36 +8,37 @@ export default function Home() {
       {/* Hero Section Wrapper */}
       <div className="relative overflow-hidden bg-primary/5 w-full">
         <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24">
-          {/* Wave Hero Background Image */}
-          <div className="absolute inset-0 pointer-events-none select-none z-0">
-            <div className="max-w-7xl mx-auto h-full w-full relative px-6 lg:px-8">
-              <div className="absolute bottom-0 left-6 lg:left-8 w-[45%] h-[90%]">
-                <Image
-                  src="/hero-wave.png"
-                  alt="Wave background decoration"
-                  fill
-                  priority
-                  className="object-contain object-left-bottom"
-                />
-              </div>
-            </div>
-          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center relative z-10">
 
             {/* Left Column: Hero Typography & Call-to-actions */}
-            <div className="lg:col-span-6 flex flex-col items-start text-left">
-              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black text-slate-900 leading-[1.5] font-bold">
+            <div className="lg:col-span-6 flex flex-col items-start text-left relative lg:static">
+              {/* Wave Hero Background Image */}
+              <div className="absolute inset-0 pointer-events-none select-none z-0">
+                <div className="max-w-7xl mx-auto h-full w-full relative px-6 lg:px-8">
+                  <div className="absolute -bottom-5 lg:-bottom-25 -left-6 lg:-left-10 h-full w-full lg:w-[60%]">
+                    <Image
+                      src="/hero-wave.png"
+                      alt="Wave background decoration"
+                      fill
+                      priority
+                      className="object-contain object-left-bottom"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black text-slate-900 leading-[1.5] font-bold relative z-10">
                 Wujudkan Masa <br />
                 Depanmu <br />
                 Bersama <span className="text-primary font-black">Sixora</span>
               </h1>
 
-              <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-xl leading-relaxed">
+              <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-xl leading-relaxed relative z-10">
                 Mencetak generasi unggul yang siap kerja, mandiri, dan berkarakter melalui ekosistem pendidikan digital berbasis industri global.
               </p>
 
-              <div className="flex flex-row flex-wrap items-center gap-4 mt-8 sm:mt-10">
+              <div className="flex flex-row flex-wrap items-center gap-4 mt-8 sm:mt-10 relative z-10">
                 <Link
                   href="#"
                   className="bg-primary hover:bg-primary-hover text-white font-bold px-8 py-2.5 rounded-xl transition-all duration-200 active:scale-[0.97] shadow-lg shadow-primary/10 hover:shadow-xl hover:shadow-primary/20 text-[15px]"

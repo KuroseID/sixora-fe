@@ -29,7 +29,7 @@ export default function Navbar() {
           </div>
 
           {/* Center Side: Desktop Navigation Links */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-10">
             {navItems.map((item, index) => (
               <Link
                 key={index}
@@ -43,7 +43,7 @@ export default function Navbar() {
           </div>
 
           {/* Right Side: Desktop Buttons */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/login"
               className="bg-primary hover:bg-primary-hover text-white font-bold px-6 py-1.5 rounded-xl transition-all duration-200 active:scale-[0.97] text-center min-w-[100px] shadow-sm shadow-primary/10 hover:shadow-md hover:shadow-primary/20"
@@ -59,7 +59,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle Button */}
-          <div className="flex md:hidden">
+          <div className="flex lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -81,7 +81,7 @@ export default function Navbar() {
       {/* Mobile Menu Panel */}
       <div
         className={`${isOpen ? "block opacity-100 translate-y-0" : "hidden opacity-0 -translate-y-2"
-          } md:hidden border-t border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950 transition-all duration-300 ease-out`}
+          } lg:hidden border-t border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950 transition-all duration-300 ease-out`}
         id="mobile-menu"
       >
         <div className="px-4 pt-4 pb-6 space-y-3">
