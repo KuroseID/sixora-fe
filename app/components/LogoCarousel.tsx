@@ -20,14 +20,14 @@ export default function LogoCarousel() {
   const marqueeLogos = [...logos, ...logos];
 
   return (
-    <section className="w-full py-3 bg-primary/6 dark:bg-zinc-900 overflow-hidden transition-colors duration-300">
+    <section className="w-full bg-primary/6 dark:bg-zinc-900 overflow-hidden transition-colors duration-300 ">
       <div className="relative flex w-full overflow-x-hidden group/marquee">
         {/* Infinite Marquee Track */}
         <div className="flex gap-12 sm:gap-16 animate-marquee whitespace-nowrap py-4 group-hover/marquee:[animation-play-state:paused]">
           {marqueeLogos.map((logo, idx) => (
             <div
               key={`${logo.id}-${idx}`}
-              className="relative flex-shrink-0 h-16 sm:h-20 cursor-pointer transition-all duration-300 hover:scale-125 hover:-translate-y-1 active:scale-95 group/item flex items-center justify-center px-2"
+              className="relative flex-shrink-0 h-16 sm:h-20 cursor-pointer transition-all duration-300 hover:scale-150 hover:-translate-y-1 active:scale-95 group/item flex items-center justify-center px-2"
             >
               <Image
                 src={logo.src}
