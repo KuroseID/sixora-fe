@@ -181,19 +181,33 @@ export default function Home() {
           </div>
         </main>
       </div>
+      <div className="w-full flex flex-col items-center bg-white pt-16">
+        <div className="text-center px-6 max-w-4xl mx-auto mb-12 relative z-10">
+          <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
+            Virtual Tour
+          </div>
+          <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+            Jelajahi Sekolah Kami
+          </h2>
+          <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            Nikmati pengalaman berkeliling lingkungan sekolah secara virtual melalui tampilan 360°. Kenali setiap sudut sekolah, fasilitas, dan area pembelajaran dengan mudah dari mana saja.
+          </p>
+        </div>
+      </div>
 
       <div className="relative overflow-hidden">
         <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24 bg-gray-300 h-[600px]">
           {/* <h1 className="h-full text-center font-black text-5xl">VIRTUAL 360°</h1> */}
         </main>
       </div>
+
       <div className="w-full flex flex-col items-center bg-white pt-16">
         <div className="text-center px-6 max-w-4xl mx-auto mb-12 relative z-10">
           <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
             Jurusan
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
-            Jelajahi Jurusan Sekolah Kami
+            Jelajahi Jurusan Kami
           </h2>
           <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
             Apa aja dah di sini isinya, lorem aja kali ya? lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque odio rerum, minus praesentium quisquam aliquid? Tempore, ad ratione! Vitae nobis quae at nihil deleniti architecto autem cum fugit a exercitationem!
@@ -202,6 +216,11 @@ export default function Home() {
       </div>
       <JurusanCard />
       <LogoCarousel />
+
+      <div className="relative overflow-hidden">
+        <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24 bg-gray-300 h-[700px]">
+        </main>
+      </div>
     </div>
   );
 }
