@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import LogoCarousel from "@/app/components/LogoCarousel";
+import JurusanCard from "@/app/components/JurusanCard";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center relative z-10">
 
             {/* Left Column: Hero Typography & Call-to-actions */}
-            <div className="lg:col-span-6 flex flex-col items-start text-left relative lg:static">
+            <div className="lg:col-span-6 flex flex-col items-start text-left relative lg:static order-2 lg:order-1">
               {/* Wave Hero Background Image */}
               <div className="absolute inset-0 pointer-events-none select-none z-0">
                 <div className="max-w-7xl mx-auto h-full w-full relative px-6 lg:px-8">
@@ -28,10 +29,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black text-slate-900 leading-[1.5] font-bold relative z-10">
+              {/* <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black text-slate-900 leading-[1.5] font-bold relative z-10">
                 Wujudkan Masa <br />
                 Depanmu <br />
                 Bersama <span className="text-primary font-black">Sixora</span>
+              </h1> */}
+              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black text-slate-900 leading-[1.5] font-bold relative z-10">
+                Selamat Datang di <br />
+                <span className="text-primary font-black">SMKN 6 Jember</span>
               </h1>
 
               <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-xl leading-relaxed relative z-10">
@@ -54,7 +59,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 flex justify-center lg:justify-end relative">
+            <div className="lg:col-span-6 flex justify-center lg:justify-end relative order-1 lg:order-2">
               <Image
                 src="/hero-image.webp"
                 alt="SMK Negeri 6 Jember"
@@ -104,7 +109,7 @@ export default function Home() {
         </div> */}
         <div className="absolute inset-0 pointer-events-none select-none z-0">
           <div className="max-w-7xl mx-auto h-full w-full relative">
-            <div className="absolute lg:-top-2/3 lg:left-1/3  h-full w-[30%]">
+            <div className="absolute lg:-top-2/3 lg:left-[40%]  h-full w-[30%]">
               <Image
                 src="/about-floating-triangle.webp"
                 alt="Wave background decoration"
@@ -176,6 +181,27 @@ export default function Home() {
           </div>
         </main>
       </div>
+
+      <div className="relative overflow-hidden">
+        <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24 bg-gray-300 h-[600px]">
+          {/* <h1 className="h-full text-center font-black text-5xl">VIRTUAL 360°</h1> */}
+        </main>
+      </div>
+      <div className="w-full flex flex-col items-center bg-white pt-16">
+        <div className="text-center px-6 max-w-4xl mx-auto mb-12 relative z-10">
+          <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
+            Jurusan
+          </div>
+          <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+            Jelajahi Jurusan Sekolah Kami
+          </h2>
+          <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            Apa aja dah di sini isinya, lorem aja kali ya? lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque odio rerum, minus praesentium quisquam aliquid? Tempore, ad ratione! Vitae nobis quae at nihil deleniti architecto autem cum fugit a exercitationem!
+          </p>
+        </div>
+      </div>
+      <JurusanCard />
+      <LogoCarousel />
     </div>
   );
 }
