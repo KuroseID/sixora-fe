@@ -57,3 +57,28 @@ body {
   color: var(--foreground);
   font-family: var(--font-poppins), sans-serif;
 }
+
+/* Thin scrollbar — modern browsers (Firefox, Chrome 121+) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c4c4c4 transparent;
+}
+
+/* Thin scrollbar — WebKit (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4;
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}

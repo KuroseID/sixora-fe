@@ -16,28 +16,36 @@ export default function LogoCarousel() {
     { id: 10, src: "/studio6.webp", alt: "Studo 6" },
   ];
 
-  // Duplicate the list to make a seamless infinite loop in the CSS marquee
-  const marqueeLogos = [...logos, ...logos];
+  // Repeat logos enough times within each track to cover ultra-wide viewports / zoom-out
+  const repeatedLogos = [...logos, ...logos, ...logos];
+
+  const renderTrack = (keyPrefix: string) => (
+    <div className="flex shrink-0 gap-12 sm:gap-16 items-center py-4">
+      {repeatedLogos.map((logo, idx) => (
+        <div
+          key={`${keyPrefix}-${idx}`}
+          className="relative flex-shrink-0 h-16 sm:h-20 cursor-pointer transition-all duration-300 hover:scale-150 hover:-translate-y-1 active:scale-95 group/item flex items-center justify-center px-2"
+        >
+          <Image
+            src={logo.src}
+            alt={logo.alt}
+            width={200}
+            height={80}
+            className="h-12 sm:h-16 w-auto object-contain group-hover/item:rotate-2 transition-transform duration-300"
+          />
+        </div>
+      ))}
+    </div>
+  );
 
   return (
-    <section className="w-full bg-primary/6 dark:bg-zinc-900 overflow-hidden transition-colors duration-300 ">
+    <section className="w-full bg-primary/6 dark:bg-zinc-900 overflow-hidden transition-colors duration-300">
       <div className="relative flex w-full overflow-x-hidden group/marquee">
-        {/* Infinite Marquee Track */}
-        <div className="flex gap-12 sm:gap-16 animate-marquee whitespace-nowrap py-4 group-hover/marquee:[animation-play-state:paused]">
-          {marqueeLogos.map((logo, idx) => (
-            <div
-              key={`${logo.id}-${idx}`}
-              className="relative flex-shrink-0 h-16 sm:h-20 cursor-pointer transition-all duration-300 hover:scale-150 hover:-translate-y-1 active:scale-95 group/item flex items-center justify-center px-2"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={200}
-                height={80}
-                className="h-12 sm:h-16 w-auto object-contain group-hover/item:rotate-2 transition-transform duration-300"
-              />
-            </div>
-          ))}
+        <div className="flex animate-marquee group-hover/marquee:[animation-play-state:paused]">
+          {renderTrack("a")}
+          {renderTrack("b")}
+          {renderTrack("c")}
+          {renderTrack("d")}
         </div>
       </div>
     </section>
