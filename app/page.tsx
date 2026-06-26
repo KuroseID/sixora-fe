@@ -140,7 +140,7 @@ export default function Home() {
                   />
 
                   <a
-                    href="https://www.youtube.com/@smknegeri6jember"
+                    href="https://www.youtube.com/watch?v=KepZQV6mXkw"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-14 h-14 sm:w-[72px] sm:h-[72px] bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-[#50b0ea] z-20 group"
