@@ -2,17 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "Beranda", href: "#" },
-    { label: "Beranda", href: "#" },
-    { label: "Beranda", href: "#" },
-    { label: "Beranda", href: "#" },
-    { label: "Beranda", href: "#" },
+    { label: "Home", href: "/#home" },
+    { label: "Virtual Tour", href: "/#virtual-tour" },
+    { label: "Jurusan", href: "/#jurusan" },
+    { label: "Industri", href: "/#industri" },
+    { label: "PPDB", href: "/#ppdb" },
   ];
 
   return (

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 interface Department {
   title: string;
@@ -77,6 +78,24 @@ export default function JurusanCard() {
     <div className="w-full flex flex-col items-center bg-white pt-16">
       {/* Blue Background Slider Section */}
       <div className="w-full bg-primary py-16 md:py-24 px-4 md:px-8 relative overflow-hidden flex justify-center items-center min-h-[460px] sm:min-h-[520px] md:min-h-[580px]">
+        {/* Background Image Overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none select-none z-0 bg-[url('/jurusan-bg.webp')] bg-[size:auto_100%] bg-center bg-no-repeat mix-blend-overlay"
+        />
+
+        {/* Top-Right "Lihat Selengkapnya" Link aligned with max-w-7xl */}
+        <div className="absolute inset-x-0 top-0 w-full max-w-7xl mx-auto px-6 lg:px-8 pointer-events-none h-full z-40">
+          <Link
+            href="/jurusan"
+            className="gap-2 absolute top-6 right-6 md:top-8 md:right-8 lg:right-8 text-white hover:text-zinc-100 font-bold text-sm sm:text-[15px] flex items-center gap-1.5 transition-all duration-200 group pointer-events-auto underline underline-offset-4 decoration-white/70 hover:decoration-white"
+          >
+            <span>Lihat Selengkapnya</span>
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.444114 0.420946C0.303332 0.553514 0.191641 0.710979 0.115433 0.884327C0.0392265 1.05768 0 1.2435 0 1.43118C0 1.61885 0.0392265 1.80468 0.115433 1.97802C0.191641 2.15137 0.303332 2.30884 0.444114 2.4414L6.33639 8.00125L0.444114 13.5611C0.160165 13.829 0.000643035 14.1924 0.000643035 14.5713C0.000643035 14.9502 0.160165 15.3136 0.444114 15.5816C0.728064 15.8495 1.11318 16 1.51475 16C1.91631 16 2.30143 15.8495 2.58538 15.5816L9.55589 9.00431C9.69667 8.87175 9.80836 8.71428 9.88457 8.54093C9.96078 8.36758 10 8.18175 10 7.99408C10 7.80641 9.96078 7.62058 9.88457 7.44724C9.80836 7.27389 9.69667 7.11642 9.55589 6.98385L2.58538 0.406617C2.0083 -0.137904 1.03638 -0.137904 0.444114 0.420946Z" fill="white" />
+            </svg>
+          </Link>
+        </div>
+
         {/* Navigation Buttons Container */}
         <div className="max-w-4xl items-center mx-auto absolute pb-60 lg:pb-30 inset-x-4 md:inset-x-8 lg:inset-x-24 top-1/2 -translate-y-1/2 flex justify-between items-center pointer-events-none z-40">
           {/* Left Arrow Button */}
