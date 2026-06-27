@@ -5,6 +5,7 @@ import JurusanSection from "@/app/components/JurusanSection";
 import JurusanCarousel from "@/app/components/JurusanCarousel";
 import Navbar from "@/app/components/Navbar";
 import MitraIndustriSection from "@/app/components/MitraIndustriSection";
+import PPDBSection from "@/app/components/PPDBSection";
 
 export default function Home() {
   return (
@@ -248,22 +249,18 @@ export default function Home() {
           <div id="ppdb" className="w-full flex flex-col items-center scroll-mt-16">
             <div className="text-center px-6 max-w-4xl mx-auto mb-12 relative z-10">
               <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
-                PPDB
+                PENERIMAAN PESERTA DIDIK BARU
               </div>
               <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
-                Pendaftaran Peserta Didik Baru <br />
+                PPDB <span className="text-primary">2026</span>
               </h2>
               <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                Ayo daftarkan diri kamu segera untuk menjadi bagian dari keluarga besar SMK Negeri 6 Jember!
+                Temukan informasi mengenai Penerimaan Peserta Didik Baru (PPDB), mulai dari jadwal, persyaratan, alur pendaftaran, hingga pengumuman hasil seleksi.
               </p>
             </div>
           </div>
 
-          <div className="relative overflow-hidden">
-            <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24 bg-gray-300 h-[600px]">
-              {/* <h1 className="h-full text-center font-black text-5xl">VIRTUAL 360°</h1> */}
-            </main>
-          </div>
+          <PPDBSection />
         </div>
 
         {/* <div id="ppdb" className="relative overflow-hidden">
