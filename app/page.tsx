@@ -148,7 +148,7 @@ export default function Home() {
                     href="https://www.youtube.com/watch?v=KepZQV6mXkw"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-14 h-14 sm:w-[72px] sm:h-[72px] bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-[#50b0ea] z-20 group"
+                    className="absolute left-[50%] top-[45%] -translate-x-1/2 -translate-y-1/2 w-14 h-14 sm:w-[72px] sm:h-[72px] bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-[#50b0ea] z-20 group"
                   >
                     <svg width="129" height="129" viewBox="0 0 129 129" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect x="5.96956e-08" width="129" height="129" rx="64.5" fill="#65C4FF" />

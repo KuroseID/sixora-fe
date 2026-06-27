@@ -19,12 +19,12 @@ export default function Jurusan() {
   const promoTextRef = useRef<HTMLDivElement>(null);
 
   const cardsData: CardData[] = [
-    { id: 1, slug: "rpl", name: "Rekayasa Perangkat Lunak", image: "/banner/rpl-banner.webp" },
-    { id: 2, slug: "dkv", name: "Desain Komunikasi Visual", image: "/banner/dkv-banner.webp" },
-    { id: 3, slug: "ak", name: "Akuntansi", image: "/banner/ak-banner.webp" },
-    { id: 4, slug: "mp", name: "Manajemen Perkantoran", image: "/banner/mp-banner.webp" },
-    { id: 5, slug: "bd", name: "Bisnis Digital", image: "/banner/bd-banner.webp" },
-    { id: 6, slug: "kkbt", name: "Kriya Kreatif Batik & Tekstil", image: "/banner/kkbt-banner.webp" },
+    { id: 1, slug: "rpl", name: "Rekayasa Perangkat Lunak", image: "/banner/RPL-BANNER.webp" },
+    { id: 2, slug: "dkv", name: "Desain Komunikasi Visual", image: "/banner/DKV-BANNER.webp" },
+    { id: 3, slug: "ak", name: "Akuntansi", image: "/banner/AK-BANNER.webp" },
+    { id: 4, slug: "mp", name: "Manajemen Perkantoran", image: "/banner/MP-BANNER.webp" },
+    { id: 5, slug: "bd", name: "Bisnis Digital", image: "/banner/BD-BANNER.webp" },
+    { id: 6, slug: "kkbt", name: "Kriya Kreatif Batik & Tekstil", image: "/banner/KKBT-BANNER.webp" },
   ];
 
   useEffect(() => {

@@ -19,7 +19,7 @@ const departmentData: Record<string, DepartmentDetail> = {
     title: "Rekayasa Perangkat Lunak",
     shortName: "RPL",
     description: "Mempelajari pengembangan perangkat lunak, website, aplikasi mobile, dan basis data dengan pendekatan berbasis proyek untuk mencetak talenta digital yang siap kerja dan berdaya saing tinggi di era industri 4.0.",
-    image: "/epim-harapan-1.webp",
+    image: "/banner/RPL-BANNER.webp",
     competencies: [
       "Pemrograman Web & Mobile (HTML, CSS, JS, React, Flutter)",
       "Pengembangan Basis Data (MySQL, PostgreSQL)",
@@ -39,7 +39,7 @@ const departmentData: Record<string, DepartmentDetail> = {
     title: "Desain Komunikasi Visual",
     shortName: "DKV",
     description: "Mengembangkan kreativitas di bidang seni visual, videografi, fotografi, desain grafis, ilustrasi, dan media digital interaktif untuk menghasilkan karya seni bernilai komunikasi tinggi.",
-    image: "/about-image.webp",
+    image: "/banner/DKV-BANNER.webp",
     competencies: [
       "Fotografi Studio & Outdoor",
       "Videografi & Penyuntingan Video (Adobe Premiere, After Effects)",
@@ -55,11 +55,11 @@ const departmentData: Record<string, DepartmentDetail> = {
       "Content Creator"
     ]
   },
-  akl: {
-    title: "Akuntansi & Keuangan Lembaga",
-    shortName: "AKL",
+  ak: {
+    title: "Akuntansi",
+    shortName: "AK",
     description: "Membekali siswa dengan keterampilan akuntansi keuangan, akuntansi manufaktur, administrasi pajak, perbankan, dan penggunaan aplikasi komputer akuntansi (MYOB/Spreadsheet) untuk kebutuhan industri modern.",
-    image: "/hero-image.webp",
+    image: "/banner/AK-BANNER.webp",
     competencies: [
       "Akuntansi Keuangan & Perusahaan",
       "Administrasi Perpajakan Indonesia",
@@ -75,11 +75,11 @@ const departmentData: Record<string, DepartmentDetail> = {
       "Internal Auditor Assistant"
     ]
   },
-  mplb: {
-    title: "Manajemen Perkantoran & Layanan Bisnis",
-    shortName: "MPLB",
+  mp: {
+    title: "Manajemen Perkantoran",
+    shortName: "MP",
     description: "Mempelajari pengelolaan administrasi perkantoran modern, manajemen kearsipan digital, komunikasi bisnis, humas, dan pelayanan prima berbasis teknologi perkantoran digital.",
-    image: "/sekolah.png",
+    image: "/banner/MP-BANNER.webp",
     competencies: [
       "Korespondensi Bahasa Indonesia & Inggris",
       "Manajemen Kearsipan Digital (E-Filing)",
@@ -95,11 +95,11 @@ const departmentData: Record<string, DepartmentDetail> = {
       "Office Manager Assistant"
     ]
   },
-  pm: {
-    title: "Pemasaran & Bisnis Digital",
-    shortName: "PM",
+  bd: {
+    title: "Bisnis Digital",
+    shortName: "BD",
     description: "Mempelajari strategi bisnis digital, pemasaran ritel, pengelolaan media sosial bisnis, e-commerce, serta analisis pasar untuk mencetak wirausahawan mandiri yang melek teknologi.",
-    image: "/epim-harapan-1.webp",
+    image: "/banner/BD-BANNER.webp",
     competencies: [
       "Digital Marketing & SEO Strategies",
       "E-Commerce & Online Store Management",
@@ -119,7 +119,7 @@ const departmentData: Record<string, DepartmentDetail> = {
     title: "Kriya Kreatif Batik & Tekstil",
     shortName: "KKBT",
     description: "Melestarikan budaya bangsa melalui pembelajaran teknik membatik tulis dan cap, desain motif tekstil modern, tenun, sablon, serta pembuatan produk kerajinan tekstil bernilai estetis dan ekonomis tinggi.",
-    image: "/about-image.webp",
+    image: "/banner/KKBT-BANNER.webp",
     competencies: [
       "Teknik Membatik (Tulis, Cap, Kombinasi)",
       "Pewarnaan Tekstil Tradisional & Sintetis",

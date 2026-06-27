@@ -43,7 +43,7 @@ export default function Navbar() {
           </div>
 
           {/* Right Side: Desktop Buttons */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/login"
               className="bg-primary hover:bg-primary-hover text-white font-bold px-6 py-1.5 rounded-xl transition-all duration-200 active:scale-[0.97] text-center min-w-[100px] shadow-sm shadow-primary/10 hover:shadow-md hover:shadow-primary/20"
@@ -56,7 +56,7 @@ export default function Navbar() {
             >
               Register
             </Link>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Toggle Button */}
           <div className="flex lg:hidden">

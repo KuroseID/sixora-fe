@@ -86,19 +86,19 @@ export default function Footer() {
               Akses Cepat
             </h4>
             <div className="flex flex-col gap-3.5 text-sm font-medium text-white/90">
-              <Link href="#home" className="hover:underline transition-all hover:text-white">
+              <Link href="/#home" className="hover:underline transition-all hover:text-white">
                 Home
               </Link>
-              <Link href="#virtual-tour" className="hover:underline transition-all hover:text-white">
+              <Link href="/#virtual-tour" className="hover:underline transition-all hover:text-white">
                 Virtual Tour
               </Link>
-              <Link href="#jurusan" className="hover:underline transition-all hover:text-white">
+              <Link href="/#jurusan" className="hover:underline transition-all hover:text-white">
                 Jurusan
               </Link>
-              <Link href="#industri" className="hover:underline transition-all hover:text-white">
+              <Link href="/#industri" className="hover:underline transition-all hover:text-white">
                 Industri
               </Link>
-              <Link href="#ppdb" className="hover:underline transition-all hover:text-white">
+              <Link href="/#ppdb" className="hover:underline transition-all hover:text-white">
                 PPDB
               </Link>
             </div>
