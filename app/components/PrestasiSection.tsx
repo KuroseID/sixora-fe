@@ -136,7 +136,7 @@ export default function PrestasiSection() {
               onClick={() => setActiveIndex(idx)}
               className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none ${activeIndex === idx
                 ? "bg-white scale-125"
-                : "bg-white/40 hover:bg-white/60"
+                : "bg-transparent border-2 border-white"
                 }`}
             />
           ))}

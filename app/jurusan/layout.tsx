@@ -11,7 +11,10 @@ export default function JurusanLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>
-    <Navbar />
-    {children}</>;
+  return (
+    <>
+      <Navbar />
+      {children}
+    </>
+  );
 }

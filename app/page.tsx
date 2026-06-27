@@ -8,6 +8,7 @@ import MitraIndustriSection from "@/app/components/MitraIndustriSection";
 import PPDBSection from "@/app/components/PPDBSection";
 import PrestasiSection from "@/app/components/PrestasiSection";
 import FAQSection from "@/app/components/FAQSection";
+import Footer from "@/app/components/Footer";
 
 export default function Home() {
   return (
@@ -301,10 +302,7 @@ export default function Home() {
           <FAQSection />
         </div>
 
-        {/* <div id="ppdb" className="relative overflow-hidden">
-          <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24 bg-gray-500 h-[700px]">
-          </main>
-        </div> */}
+        <Footer />
       </div>
     </>
   );
