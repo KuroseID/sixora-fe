@@ -5,11 +5,27 @@ import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
 
+interface CardData {
+  id: number;
+  slug: string;
+  name: string;
+  image: string;
+}
+
 export default function Jurusan() {
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const cardsContainerRef = useRef<HTMLDivElement>(null);
   const promoTextRef = useRef<HTMLDivElement>(null);
+
+  const cardsData: CardData[] = [
+    { id: 1, slug: "rpl", name: "Rekayasa Perangkat Lunak", image: "/banner/rpl-banner.webp" },
+    { id: 2, slug: "dkv", name: "Desain Komunikasi Visual", image: "/banner/dkv-banner.webp" },
+    { id: 3, slug: "ak", name: "Akuntansi", image: "/banner/ak-banner.webp" },
+    { id: 4, slug: "mp", name: "Manajemen Perkantoran", image: "/banner/mp-banner.webp" },
+    { id: 5, slug: "bd", name: "Bisnis Digital", image: "/banner/bd-banner.webp" },
+    { id: 6, slug: "kkbt", name: "Kriya Kreatif Batik & Tekstil", image: "/banner/kkbt-banner.webp" },
+  ];
 
   useEffect(() => {
     const cards = gsap.utils.toArray<HTMLElement>(".jurusan-card");
@@ -53,7 +69,7 @@ export default function Jurusan() {
         ease: "power2.inOut",
       });
 
-      // 2. Stay Still for 1 second, then open sideways and Fade In Text together
+      // 2. Stay Still for 0.1s, then open sideways and Fade In Text together
       tl.to(
         cards,
         {
@@ -195,11 +211,11 @@ export default function Jurusan() {
             ref={cardsContainerRef}
             className="relative flex justify-center items-center w-full max-w-[900px] h-[300px] sm:h-[350px] md:h-[400px] mt-[5vh] z-10 overflow-visible"
           >
-            {[1, 2, 3, 4, 5, 6].map((id, index) => {
+            {cardsData.map((card, index) => {
               const zIndex = 10 + index;
               return (
                 <div
-                  key={id}
+                  key={card.id}
                   className="jurusan-card absolute w-[160px] sm:w-[200px] md:w-[235px] h-[220px] sm:h-[270px] md:h-[315px] hover:z-50 select-none origin-bottom will-change-transform"
                   style={{
                     zIndex: zIndex,
@@ -207,15 +223,17 @@ export default function Jurusan() {
                     marginLeft: "-80px", // Half of w-[160px] to center on mobile
                   }}
                 >
-                  <div className="w-full h-full rounded-[24px] md:rounded-[32px] overflow-hidden border-4 border-white shadow-[0_12px_40px_rgba(0,0,0,0.12)] bg-white transition-transform duration-300 hover:scale-105 cursor-pointer">
-                    <Image
-                      src="/epim-harapan-1.webp"
-                      alt={`RPL Poster ${id}`}
-                      fill
-                      priority
-                      className="object-cover"
-                    />
-                  </div>
+                  <Link href={`/jurusan/${card.slug}`}>
+                    <div className="w-full h-full overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.12)] bg-white transition-transform duration-300 hover:scale-105 hover:-translate-y-10 cursor-pointer">
+                      <Image
+                        src={card.image}
+                        alt={`${card.name} Poster`}
+                        fill
+                        priority
+                        className="object-cover"
+                      />
+                    </div>
+                  </Link>
                 </div>
               );
             })}

@@ -25,6 +25,16 @@ const slides: SlideData[] = [
     src: "/epim-harapan-1.webp",
     alt: "Prestasi 3",
   },
+  {
+    id: 4,
+    src: "/epim-harapan-1.webp",
+    alt: "Prestasi 3",
+  },
+  {
+    id: 5,
+    src: "/epim-harapan-1.webp",
+    alt: "Prestasi 3",
+  },
 ];
 
 export default function PrestasiSection() {
@@ -39,7 +49,7 @@ export default function PrestasiSection() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-white py-16 px-4 md:px-8 flex flex-col items-center justify-center min-h-[580px] rounded-3xl shadow-inner">
+    <div className="relative w-full pt-10 overflow-hidden bg-white px-4 md:px-8 flex flex-col items-center justify-center min-h-[580px] rounded-3xl">
       {/* Background Image Overlay */}
       <div
         className="absolute inset-0 pointer-events-none select-none z-0 bg-[url('/prestasi-bg.webp')] bg-[size:auto_100%] bg-center bg-no-repeat"
@@ -48,18 +58,36 @@ export default function PrestasiSection() {
       {/* Main 3D Card Stack Slider Container */}
       <div className="w-full max-w-5xl mx-auto flex items-center justify-center relative h-[360px] md:h-[400px] z-10 overflow-visible">
         {slides.map((slide, idx) => {
-          // Calculate active state and positioning relative to activeIndex
-          const offset = (idx - activeIndex + slides.length) % slides.length;
+          // Calculate circular offset
+          let offset = idx - activeIndex;
+          if (offset < -Math.floor(slides.length / 2)) offset += slides.length;
+          if (offset > Math.floor(slides.length / 2)) offset -= slides.length;
 
           let positionStyle = "";
           let zIndex = 0;
           let opacity = 0;
           let transform = "";
 
+          // if (offset === 0) {
+          //   // Center slide (Active)
+          //   positionStyle = "translate-x-0 scale-100 z-30 opacity-100";
+          //   zIndex = 30;
+          //   opacity = 1;
+          // } else if (offset === 1) {
+          //   // Right slide (Faded/Background)
+          //   positionStyle = "translate-x-[60%] sm:translate-x-[75%] md:translate-x-[90%] scale-75 z-10 opacity-40 hover:opacity-60 translate-y-[20%]";
+          //   zIndex = 10;
+          //   opacity = 0.4;
+          // } else if (offset === 2) {
+          //   // Left slide (Faded/Background)
+          //   positionStyle = "-translate-x-[60%] sm:-translate-x-[75%] md:-translate-x-[90%] scale-75 z-10 opacity-40 hover:opacity-60 -translate-y-[20%]";
+          //   zIndex = 10;
+          //   opacity = 0.4;
+          // }
           if (offset === 0) {
             // Center slide (Active)
             positionStyle = "translate-x-0 scale-100 z-30 opacity-100";
-            transform = "rotate(-2deg)";
+            // transform = "rotate(-2deg)";
             zIndex = 30;
             opacity = 1;
           } else if (offset === 1) {
@@ -68,28 +96,32 @@ export default function PrestasiSection() {
             transform = "rotate(4deg)";
             zIndex = 10;
             opacity = 0.4;
-          } else if (offset === 2) {
+          } else if (offset === -1) {
             // Left slide (Faded/Background)
             positionStyle = "-translate-x-[60%] sm:-translate-x-[75%] md:-translate-x-[90%] scale-75 z-10 opacity-40 hover:opacity-60 -translate-y-[20%]";
             transform = "rotate(-6deg)";
             zIndex = 10;
             opacity = 0.4;
+          } else {
+            // Out of bounds slides (Hidden)
+            positionStyle = "translate-x-0 scale-75 z-0 opacity-0 pointer-events-none";
+            zIndex = 0;
+            opacity = 0;
           }
 
           return (
             <div
               key={slide.id}
               onClick={() => {
-                if (offset !== 0) {
-                  setActiveIndex(idx);
-                }
+                if (offset === 1) nextSlide();
+                if (offset === -1) prevSlide();
               }}
               style={{
                 zIndex: zIndex,
                 opacity: opacity,
                 transform: `${transform}`,
               }}
-              className={`absolute w-[320px] md:w-[350px] h-[340px] md:h-[370px] rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden cursor-pointer transition-all duration-700 ease-out select-none flex-shrink-0 ${positionStyle}`}
+              className={`absolute w-[320px] md:w-[350px] h-[340px] md:h-[370px] rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 ease-out select-none flex-shrink-0 ${positionStyle}`}
             >
               <div className="relative w-full h-full">
                 <Image
@@ -109,7 +141,7 @@ export default function PrestasiSection() {
         {/* Left Arrow */}
         <button
           onClick={prevSlide}
-          className="text-white hover:text-primary transition-colors duration-200 cursor-pointer focus:outline-none"
+          className="text-white transition-colors duration-200 cursor-pointer focus:outline-none"
         >
           <svg
             width="28"
@@ -145,7 +177,7 @@ export default function PrestasiSection() {
         {/* Right Arrow */}
         <button
           onClick={nextSlide}
-          className="text-white hover:text-primary transition-colors duration-200 cursor-pointer focus:outline-none"
+          className="text-white transition-colors duration-200 cursor-pointer focus:outline-none"
         >
           <svg
             width="28"
@@ -164,6 +196,6 @@ export default function PrestasiSection() {
           </svg>
         </button>
       </div>
-    </div>
+    </div >
   );
 }
