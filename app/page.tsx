@@ -4,6 +4,7 @@ import LogoCarousel from "@/app/components/LogoCarousel";
 import JurusanSection from "@/app/components/JurusanSection";
 import JurusanCarousel from "@/app/components/JurusanCarousel";
 import Navbar from "@/app/components/Navbar";
+import MitraIndustriSection from "@/app/components/MitraIndustriSection";
 
 export default function Home() {
   return (
@@ -240,6 +241,24 @@ export default function Home() {
             </div>
           </div>
 
+          <MitraIndustriSection />
+        </div>
+
+        <div className="bg-white pb-16">
+          <div id="ppdb" className="w-full flex flex-col items-center scroll-mt-16">
+            <div className="text-center px-6 max-w-4xl mx-auto mb-12 relative z-10">
+              <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
+                PPDB
+              </div>
+              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+                Pendaftaran Peserta Didik Baru <br />
+              </h2>
+              <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                Ayo daftarkan diri kamu segera untuk menjadi bagian dari keluarga besar SMK Negeri 6 Jember!
+              </p>
+            </div>
+          </div>
+
           <div className="relative overflow-hidden">
             <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24 bg-gray-300 h-[600px]">
               {/* <h1 className="h-full text-center font-black text-5xl">VIRTUAL 360°</h1> */}
@@ -247,10 +266,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="ppdb" className="relative overflow-hidden">
+        {/* <div id="ppdb" className="relative overflow-hidden">
           <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24 bg-gray-500 h-[700px]">
           </main>
-        </div>
+        </div> */}
       </div>
     </>
   );

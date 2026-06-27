@@ -16,6 +16,7 @@
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
   --animate-marquee: marquee 25s linear infinite;
+  --animate-marquee-slow: marquee 35s linear infinite;
   --animate-fade-in: fade-in 0.2s ease-out;
   --animate-scale-up: scale-up 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 

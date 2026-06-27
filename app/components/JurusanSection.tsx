@@ -75,7 +75,7 @@ export default function JurusanCard() {
   };
 
   return (
-    <div className="w-full flex flex-col items-center bg-white pt-16">
+    <div className="w-full flex flex-col items-center bg-white">
       {/* Blue Background Slider Section */}
       <div className="w-full bg-primary py-16 md:py-24 px-4 md:px-8 relative overflow-hidden flex justify-center items-center min-h-[460px] sm:min-h-[520px] md:min-h-[580px]">
         {/* Background Image Overlay */}
