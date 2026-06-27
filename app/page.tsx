@@ -7,6 +7,7 @@ import Navbar from "@/app/components/Navbar";
 import MitraIndustriSection from "@/app/components/MitraIndustriSection";
 import PPDBSection from "@/app/components/PPDBSection";
 import PrestasiSection from "@/app/components/PrestasiSection";
+import FAQSection from "@/app/components/FAQSection";
 
 export default function Home() {
   return (
@@ -280,6 +281,24 @@ export default function Home() {
           </div>
 
           <PPDBSection />
+        </div>
+
+        <div className="bg-white py-16">
+          <div id="prestasi" className="w-full flex flex-col items-center scroll-mt-16">
+            <div className="text-center px-6 max-w-4xl mx-auto mb-12 relative z-10">
+              <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
+                FAQ
+              </div>
+              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+                Pertanyaan yang Sering Diajukan
+              </h2>
+              <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                Temukan jawaban atas berbagai pertanyaan mengenai SMKN 6 Jember, mulai dari program keahlian, fasilitas, kerja sama industri, hingga informasi PPDB.
+              </p>
+            </div>
+          </div>
+
+          <FAQSection />
         </div>
 
         {/* <div id="ppdb" className="relative overflow-hidden">
