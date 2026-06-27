@@ -13,27 +13,27 @@ const slides: SlideData[] = [
   {
     id: 1,
     src: "/epim-harapan-1.webp",
-    alt: "Prestasi 1",
+    alt: "Epim Harapan 1",
   },
   {
     id: 2,
-    src: "/epim-harapan-1.webp",
-    alt: "Prestasi 2",
+    src: "/epim.webp",
+    alt: "Epim",
   },
   {
     id: 3,
-    src: "/epim-harapan-1.webp",
-    alt: "Prestasi 3",
+    src: "/tax.webp",
+    alt: "tax",
   },
   {
     id: 4,
-    src: "/epim-harapan-1.webp",
-    alt: "Prestasi 3",
+    src: "/lks.webp",
+    alt: "Lks",
   },
   {
     id: 5,
-    src: "/epim-harapan-1.webp",
-    alt: "Prestasi 3",
+    src: "/lks-1.webp",
+    alt: "LKs",
   },
 ];
 
@@ -121,7 +121,7 @@ export default function PrestasiSection() {
                 opacity: opacity,
                 transform: `${transform}`,
               }}
-              className={`absolute w-[320px] md:w-[350px] h-[340px] md:h-[370px] rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 ease-out select-none flex-shrink-0 ${positionStyle}`}
+              className={`absolute w-[280px] md:w-[320px] h-[350px] md:h-[400px] rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 ease-out select-none flex-shrink-0 ${positionStyle}`}
             >
               <div className="relative w-full h-full">
                 <Image
