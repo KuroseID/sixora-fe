@@ -12,6 +12,20 @@ export default function PageTransitionLoader() {
   const [shouldRender, setShouldRender] = useState(true);
   const lastPathname = useRef<string | null>(null);
 
+  // Set global flag in render phase so child components see it before their useEffects run
+  if (typeof window !== "undefined") {
+    (window as any).__loaderActive = isLoading;
+  }
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      (window as any).__loaderActive = isLoading;
+      if (!isLoading) {
+        window.dispatchEvent(new Event("loader-complete"));
+      }
+    }
+  }, [isLoading]);
+
   // 1. Detect Global Internal Link Clicks
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {

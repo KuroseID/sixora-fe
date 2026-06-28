@@ -28,159 +28,176 @@ export default function Jurusan() {
   ];
 
   useEffect(() => {
-    const cards = gsap.utils.toArray<HTMLElement>(".jurusan-card");
-    const mm = gsap.matchMedia();
+    const runAnimation = () => {
+      const cards = gsap.utils.toArray<HTMLElement>(".jurusan-card");
+      const mm = gsap.matchMedia();
 
-    mm.add("(min-width: 769px)", () => {
-      // DESKTOP ANIMATION Settings (Scattered sideways layout with asymmetric tilts)
-      const cardSettings = [
-        { id: 1, rot: -8, x: -340, y: 15 },
-        { id: 2, rot: -6, x: -220, y: -8 },
-        { id: 3, rot: -2, x: -100, y: 0 },
-        { id: 4, rot: 2, x: 100, y: -10 },
-        { id: 5, rot: 6, x: 220, y: 8 },
-        { id: 6, rot: 8, x: 340, y: -5 },
-      ];
+      mm.add("(min-width: 769px)", () => {
+        // DESKTOP ANIMATION Settings (Scattered sideways layout with asymmetric tilts)
+        const cardSettings = [
+          { id: 1, rot: -8, x: -340, y: 15 },
+          { id: 2, rot: -6, x: -220, y: -8 },
+          { id: 3, rot: -2, x: -100, y: 0 },
+          { id: 4, rot: 2, x: 100, y: -10 },
+          { id: 5, rot: 6, x: 220, y: 8 },
+          { id: 6, rot: 8, x: 340, y: -5 },
+        ];
 
-      const initialRotations = [-5, 4, -2, 3, -6, 5];
+        const initialRotations = [-5, 4, -2, 3, -6, 5];
 
-      // Master Timeline (Plays automatically on page load)
-      const tl = gsap.timeline({
-        defaults: { ease: "power2.inOut" }
-      });
+        // Master Timeline (Plays automatically on page load)
+        const tl = gsap.timeline({
+          defaults: { ease: "power2.inOut" }
+        });
 
-      // 0. Initial States (With distinct initial rotations when stacked in the center)
-      gsap.set(cards, {
-        opacity: 0,
-        scale: 0.8,
-        y: 350,
-        x: 0,
-        rotation: (i) => initialRotations[i]
-      });
-      gsap.set(promoTextRef.current, { opacity: 0, y: 30, scale: 0.95 });
-      gsap.set(titleRef.current, { opacity: 0, y: -20, scale: 0.95 });
+        // 0. Initial States (With distinct initial rotations when stacked in the center)
+        gsap.set(cards, {
+          opacity: 0,
+          scale: 0.8,
+          y: 350,
+          x: 0,
+          rotation: (i) => initialRotations[i]
+        });
+        gsap.set(promoTextRef.current, { opacity: 0, y: 30, scale: 0.95 });
+        gsap.set(titleRef.current, { opacity: 0, y: -20, scale: 0.95 });
 
-      // 1. Cards Enter (Go UP together, keeping their distinct tilted rotations)
-      tl.to(cards, {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 1,
-        ease: "power2.inOut",
-      });
-
-      // 2. Stay Still for 0.1s, then open sideways and Fade In Text together
-      tl.to(
-        cards,
-        {
-          x: (i) => cardSettings[i].x,
-          y: (i) => cardSettings[i].y,
-          rotation: (i) => cardSettings[i].rot,
+        // 1. Cards Enter (Go UP together, keeping their distinct tilted rotations)
+        tl.to(cards, {
+          y: 0,
+          opacity: 1,
           scale: 1,
           duration: 1,
           ease: "power2.inOut",
-        },
-        "+=0.1" // Diem dulu (delay before fan out)
-      )
-        .to(
-          titleRef.current,
+        });
+
+        // 2. Stay Still for 0.1s, then open sideways and Fade In Text together
+        tl.to(
+          cards,
           {
-            opacity: 1,
-            y: 0,
-            scale: 1.0,
-            duration: 1.2,
-            ease: "power2.out",
+            x: (i) => cardSettings[i].x,
+            y: (i) => cardSettings[i].y,
+            rotation: (i) => cardSettings[i].rot,
+            scale: 1,
+            duration: 1,
+            ease: "power2.inOut",
           },
-          "<" // Start at the same time as fan out
+          "+=0.1" // Diem dulu (delay before fan out)
         )
-        .to(
-          promoTextRef.current,
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1.0,
-            duration: 1.2,
-            ease: "power2.out",
-          },
-          "<" // Start at the same time as fan out
-        );
-    });
-
-    mm.add("(max-width: 768px)", () => {
-      // MOBILE ANIMATION Settings
-      const cardSettings = [
-        { id: 1, rot: -6, x: -100, y: 8 },
-        { id: 2, rot: 4, x: -60, y: -3 },
-        { id: 3, rot: -2, x: -20, y: 5 },
-        { id: 4, rot: 3, x: 20, y: -5 },
-        { id: 5, rot: -4, x: 60, y: 6 },
-        { id: 6, rot: 5, x: 100, y: -3 },
-      ];
-
-      const initialRotations = [-4, 3, -2, 2, -3, 4];
-
-      const tl = gsap.timeline({
-        defaults: { ease: "power2.inOut" }
+          .to(
+            titleRef.current,
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1.0,
+              duration: 1.2,
+              ease: "power2.out",
+            },
+            "<" // Start at the same time as fan out
+          )
+          .to(
+            promoTextRef.current,
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1.0,
+              duration: 1.2,
+              ease: "power2.out",
+            },
+            "<" // Start at the same time as fan out
+          );
       });
 
-      // 0. Initial States
-      gsap.set(cards, {
-        opacity: 0,
-        scale: 0.7,
-        y: 250,
-        x: 0,
-        rotation: (i) => initialRotations[i]
-      });
-      gsap.set(promoTextRef.current, { opacity: 0, y: 20, scale: 0.95 });
-      gsap.set(titleRef.current, { opacity: 0, y: -15, scale: 0.95 });
+      mm.add("(max-width: 768px)", () => {
+        // MOBILE ANIMATION Settings
+        const cardSettings = [
+          { id: 1, rot: -6, x: -100, y: 8 },
+          { id: 2, rot: 4, x: -60, y: -3 },
+          { id: 3, rot: -2, x: -20, y: 5 },
+          { id: 4, rot: 3, x: 20, y: -5 },
+          { id: 5, rot: -4, x: 60, y: 6 },
+          { id: 6, rot: 5, x: 100, y: -3 },
+        ];
 
-      // 1. Cards Enter (Go UP together, simultaneously)
-      tl.to(cards, {
-        y: 0,
-        opacity: 1,
-        scale: 0.75,
-        duration: 1.2,
-        ease: "power2.out",
-      });
+        const initialRotations = [-4, 3, -2, 2, -3, 4];
 
-      // 2. Stay Still for 0.8s, then open sideways and Fade In Text together
-      tl.to(
-        cards,
-        {
-          x: (i) => cardSettings[i].x * 0.7,
-          y: (i) => cardSettings[i].y * -0.2,
-          rotation: (i) => cardSettings[i].rot,
-          scale: 0.8,
+        const tl = gsap.timeline({
+          defaults: { ease: "power2.inOut" }
+        });
+
+        // 0. Initial States
+        gsap.set(cards, {
+          opacity: 0,
+          scale: 0.7,
+          y: 250,
+          x: 0,
+          rotation: (i) => initialRotations[i]
+        });
+        gsap.set(promoTextRef.current, { opacity: 0, y: 20, scale: 0.95 });
+        gsap.set(titleRef.current, { opacity: 0, y: -15, scale: 0.95 });
+
+        // 1. Cards Enter (Go UP together, simultaneously)
+        tl.to(cards, {
+          y: 0,
+          opacity: 1,
+          scale: 0.75,
           duration: 1.2,
-          ease: "power2.inOut",
-        },
-        "+=0.8" // Diem dulu (delay before fan out)
-      )
-        .to(
-          titleRef.current,
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1.0,
-            duration: 1.0,
-            ease: "power2.out",
-          },
-          "<" // Start at the same time as fan out
-        )
-        .to(
-          promoTextRef.current,
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1.0,
-            duration: 1.0,
-            ease: "power2.out",
-          },
-          "<" // Start at the same time as fan out
-        );
-    });
+          ease: "power2.out",
+        });
 
-    return () => mm.revert();
+        // 2. Stay Still for 0.8s, then open sideways and Fade In Text together
+        tl.to(
+          cards,
+          {
+            x: (i) => cardSettings[i].x * 0.7,
+            y: (i) => cardSettings[i].y * -0.2,
+            rotation: (i) => cardSettings[i].rot,
+            scale: 0.8,
+            duration: 1.2,
+            ease: "power2.inOut",
+          },
+          "+=0.8" // Diem dulu (delay before fan out)
+        )
+          .to(
+            titleRef.current,
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1.0,
+              duration: 1.0,
+              ease: "power2.out",
+            },
+            "<" // Start at the same time as fan out
+          )
+          .to(
+            promoTextRef.current,
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1.0,
+              duration: 1.0,
+              ease: "power2.out",
+            },
+            "<" // Start at the same time as fan out
+          );
+      });
+
+      return () => mm.revert();
+    };
+
+    if (typeof window !== "undefined" && (window as any).__loaderActive) {
+      let cleanupFn: (() => void) | undefined;
+      const handleLoaderComplete = () => {
+        cleanupFn = runAnimation();
+        window.removeEventListener("loader-complete", handleLoaderComplete);
+      };
+      window.addEventListener("loader-complete", handleLoaderComplete);
+      return () => {
+        window.removeEventListener("loader-complete", handleLoaderComplete);
+        if (cleanupFn) cleanupFn();
+      };
+    } else {
+      return runAnimation();
+    }
   }, []);
 
   return (
