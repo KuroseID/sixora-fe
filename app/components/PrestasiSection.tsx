@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 interface SlideData {
@@ -45,6 +45,15 @@ const slides: SlideData[] = [
 
 export default function PrestasiSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (isHovered) return;
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % slides.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [activeIndex, isHovered]);
 
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % slides.length);
@@ -55,7 +64,11 @@ export default function PrestasiSection() {
   };
 
   return (
-    <div className="relative w-full pt-20 overflow-hidden bg-white px-4 md:px-8 flex flex-col items-center justify-center min-h-[580px] rounded-3xl">
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="relative w-full pt-20 overflow-hidden bg-white px-4 md:px-8 flex flex-col items-center justify-center min-h-[580px] rounded-3xl"
+    >
       {/* Background Image Overlay */}
       <div
         className="absolute inset-0 pointer-events-none select-none z-0 bg-[url('/prestasi-bg.webp')] bg-[size:auto_100%] bg-center bg-no-repeat"
@@ -98,13 +111,13 @@ export default function PrestasiSection() {
             opacity = 1;
           } else if (offset === 1) {
             // Right slide (Faded/Background)
-            positionStyle = "translate-x-[60%] sm:translate-x-[75%] md:translate-x-[90%] scale-75 z-10 translate-y-[20%]";
+            positionStyle = "translate-x-[60%] sm:translate-x-[75%] md:translate-x-[90%] scale-75 z-10 translate-y-[10%]";
             transform = "rotate(4deg)";
             zIndex = 10;
             opacity = 1;
           } else if (offset === -1) {
             // Left slide (Faded/Background)
-            positionStyle = "-translate-x-[60%] sm:-translate-x-[75%] md:-translate-x-[90%] scale-75 z-10 -translate-y-[20%]";
+            positionStyle = "-translate-x-[60%] sm:-translate-x-[75%] md:-translate-x-[90%] scale-75 z-10 -translate-y-[10%]";
             transform = "rotate(-6deg)";
             zIndex = 10;
             opacity = 1;
