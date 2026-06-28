@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 // import Navbar from "@/app/components/Navbar";
 import "./globals.css";
+import PageTransitionLoader from "@/app/components/PageTransitionLoader";
+import { Suspense } from "react";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -28,6 +30,9 @@ export default function RootLayout({
       className={`${poppins.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col bg-zinc-50 dark:bg-zinc-950">
+        <Suspense fallback={null}>
+          <PageTransitionLoader />
+        </Suspense>
         {/* <Navbar /> */}
         {children}
       </body>
