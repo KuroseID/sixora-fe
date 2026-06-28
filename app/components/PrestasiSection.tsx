@@ -49,7 +49,7 @@ export default function PrestasiSection() {
   };
 
   return (
-    <div className="relative w-full pt-10 overflow-hidden bg-white px-4 md:px-8 flex flex-col items-center justify-center min-h-[580px] rounded-3xl">
+    <div className="relative w-full pt-20 overflow-hidden bg-white px-4 md:px-8 flex flex-col items-center justify-center min-h-[580px] rounded-3xl">
       {/* Background Image Overlay */}
       <div
         className="absolute inset-0 pointer-events-none select-none z-0 bg-[url('/prestasi-bg.webp')] bg-[size:auto_100%] bg-center bg-no-repeat"
@@ -121,7 +121,7 @@ export default function PrestasiSection() {
                 opacity: opacity,
                 transform: `${transform}`,
               }}
-              className={`absolute w-[280px] md:w-[320px] h-[350px] md:h-[400px] rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 ease-out select-none flex-shrink-0 ${positionStyle}`}
+              className={`absolute w-[330px] md:w-[370px] h-[400px] md:h-[450px] rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 ease-out select-none flex-shrink-0 ${positionStyle}`}
             >
               <div className="relative w-full h-full">
                 <Image
@@ -137,7 +137,7 @@ export default function PrestasiSection() {
       </div>
 
       {/* Navigation Indicators & Arrow Controls */}
-      <div className="flex items-center gap-6 mt-10 z-10">
+      <div className="flex items-center gap-6 mt-12 mb-7 z-10">
         {/* Left Arrow */}
         <button
           onClick={prevSlide}

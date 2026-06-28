@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import LogoCarousel from "@/app/components/LogoCarousel";
 import JurusanSection from "@/app/components/JurusanSection";
-import JurusanCarousel from "@/app/components/JurusanCarousel";
 import Navbar from "@/app/components/Navbar";
 import MitraIndustriSection from "@/app/components/MitraIndustriSection";
 import PPDBSection from "@/app/components/PPDBSection";
@@ -227,7 +226,6 @@ export default function Home() {
           </div>
         </div>
         <JurusanSection />
-        <JurusanCarousel />
 
         <div className="bg-white py-16">
           <div id="prestasi" className="w-full flex flex-col items-center scroll-mt-16">
@@ -270,7 +268,7 @@ export default function Home() {
           <div id="ppdb" className="w-full flex flex-col items-center scroll-mt-16">
             <div className="text-center px-6 max-w-4xl mx-auto mb-12 relative z-10">
               <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
-                PENERIMAAN PESERTA DIDIK BARU
+                Penerimaan Peserta Didik Baru
               </div>
               <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
                 PPDB <span className="text-primary">2026</span>

@@ -1,13 +1,16 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import JurusanCarousel from "@/app/components/JurusanCarousel";
 
 interface Department {
   title: string;
   shortName: string;
   description: string;
   image: string;
+  slug: string;
 }
 
 const departments: Department[] = [
@@ -15,43 +18,105 @@ const departments: Department[] = [
     title: "Rekayasa Perangkat Lunak",
     shortName: "RPL",
     description: "Mempelajari pengembangan perangkat lunak, website, aplikasi mobile, dan basis data dengan pendekatan berbasis proyek untuk mencetak talenta digital yang siap kerja dan berdaya saing.",
-    image: "/Union.webp"
+    image: "/Union.webp",
+    slug: "rpl"
   },
   {
     title: "Desain Komunikasi Visual",
     shortName: "DKV",
     description: "Mengembangkan kreativitas di bidang videografi, fotografi, desain grafis, ilustrasi, dan media digital interaktif untuk menghasilkan karya seni visual yang bernilai tinggi.",
-    image: "/Union.webp"
+    image: "/Union.webp",
+    slug: "dkv"
   },
   {
     title: "Akuntansi & Keuangan Lembaga",
     shortName: "AKL",
     description: "Membekali siswa dengan keterampilan akuntansi keuangan, administrasi pajak, perbankan, dan aplikasi keuangan komputer untuk kebutuhan industri modern.",
-    image: "/Union.webp"
+    image: "/Union.webp",
+    slug: "ak"
   },
   {
     title: "Manajemen Perkantoran",
     shortName: "MPLB",
     description: "Mempelajari pengelolaan administrasi perkantoran, manajemen kearsipan, komunikasi bisnis, dan pelayanan pelanggan berbasis teknologi digital.",
-    image: "/Union.webp"
+    image: "/Union.webp",
+    slug: "mp"
   },
   {
     title: "Pemasaran & Bisnis Digital",
     shortName: "PM",
     description: "Mempelajari strategi bisnis digital, pemasaran ritel, pengelolaan media sosial bisnis, serta analisis pasar untuk mencetak wirausahawan mandiri.",
-    image: "/Union.webp"
+    image: "/Union.webp",
+    slug: "bd"
   },
   {
     title: "Kriya Kreatif Batik & Tekstil",
     shortName: "KKBT",
     description: "Melestarikan budaya bangsa melalui pembelajaran teknik membatik, desain tekstil, tenun, sablon, serta pembuatan produk kriya kreatif bernilai estetis.",
-    image: "/Union.webp"
+    image: "/Union.webp",
+    slug: "kkbt"
+  }
+];
+
+const departmentThemes = [
+  {
+    // RPL (Index 0) - Merah
+    cardBg: "bg-red-500",
+    // cardBg: "bg-[#D32725]",
+    titleColor: "text-white",
+    descColor: "text-red-100",
+    imageClass: "brightness-0 invert"
+  },
+  {
+    // DKV (Index 1) - Hitam
+    cardBg: "bg-zinc-950",
+    titleColor: "text-white",
+    descColor: "text-zinc-300",
+    imageClass: "brightness-0 invert"
+  },
+  {
+    // AK (Index 2) - Hijau
+    cardBg: "bg-green-700",
+    titleColor: "text-white",
+    descColor: "text-green-100",
+    imageClass: "brightness-0 invert"
+  },
+  {
+    // MP (Index 3) - Biru
+    cardBg: "bg-sky-600",
+    titleColor: "text-white",
+    descColor: "text-sky-100",
+    imageClass: "brightness-0 invert"
+  },
+  {
+    // BD (Index 4) - Oranye
+    cardBg: "bg-orange-600",
+    titleColor: "text-white",
+    descColor: "text-orange-100",
+    imageClass: "brightness-0 invert"
+  },
+  {
+    // KKBT (Index 5) - Coklat
+    cardBg: "bg-amber-900",
+    titleColor: "text-white",
+    descColor: "text-amber-100",
+    imageClass: "brightness-0 invert"
   }
 ];
 
 export default function JurusanCard() {
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
   const total = departments.length;
+
+  useEffect(() => {
+    if (isHovered) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % total);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [currentIndex, total, isHovered]);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % total);
@@ -63,7 +128,7 @@ export default function JurusanCard() {
 
   const getCardStyles = (offset: number) => {
     if (offset === 0) {
-      return "z-30 rotate-0 translate-x-0 scale-95 md:scale-100 opacity-100 pointer-events-auto";
+      return "z-30 rotate-0 translate-x-0 scale-95 md:scale-100 opacity-100 pointer-events-auto cursor-pointer";
     }
     if (offset === -1) {
       return "z-20 -rotate-20 -translate-x-[55%] sm:-translate-x-[60%] lg:-translate-x-[90%] translate-y-6 sm:translate-y-8 lg:translate-y-45 scale-80 sm:scale-[0.85] lg:scale-90 pointer-events-auto cursor-pointer";
@@ -77,7 +142,11 @@ export default function JurusanCard() {
   return (
     <div className="w-full flex flex-col items-center bg-white">
       {/* Blue Background Slider Section */}
-      <div className="w-full bg-primary py-16 md:py-24 px-4 md:px-8 relative overflow-hidden flex justify-center items-center min-h-[460px] sm:min-h-[520px] md:min-h-[580px]">
+      <div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="w-full bg-primary py-16 md:py-24 px-4 md:px-8 relative overflow-hidden flex justify-center items-center min-h-[460px] sm:min-h-[520px] md:min-h-[580px]"
+      >
         {/* Background Image Overlay */}
         <div
           className="absolute inset-0 pointer-events-none select-none z-0 bg-[url('/jurusan-bg.webp')] bg-[size:auto_100%] bg-center bg-no-repeat mix-blend-overlay"
@@ -132,6 +201,8 @@ export default function JurusanCard() {
             if (offset > Math.floor(total / 2)) offset -= total;
 
             const styleClass = getCardStyles(offset);
+            const isActive = offset === 0;
+            const theme = departmentThemes[index];
 
             return (
               <div
@@ -139,16 +210,22 @@ export default function JurusanCard() {
                 onClick={() => {
                   if (offset === -1) prevSlide();
                   if (offset === 1) nextSlide();
+                  if (offset === 0) {
+                    router.push(`/jurusan/${dept.slug}`);
+                  }
                 }}
-                className={`p-6 sm:p-8 pt-8 sm:pt-10 absolute w-full h-auto bg-white rounded-tr-4xl rounded-tl-4xl flex flex-col items-center justify-start overflow-hidden transition-all duration-500 ease-in-out ${styleClass}`}
+                className={`p-6 sm:p-8 pt-8 sm:pt-10 absolute w-full h-auto rounded-tr-4xl rounded-tl-4xl flex flex-col items-center justify-start overflow-hidden transition-all duration-500 ease-in-out ${isActive ? theme.cardBg : "bg-white"
+                  } ${styleClass}`}
               >
                 {/* Department Description (Top) */}
-                <p className="text-slate-500 text-xs sm:text-sm md:text-base leading-relaxed text-center font-medium line-clamp-6 select-none">
+                <p className={`text-xs sm:text-sm md:text-base leading-relaxed text-center font-medium line-clamp-6 select-none transition-colors duration-500 ${isActive ? theme.descColor : "text-slate-500"
+                  }`}>
                   {dept.description}
                 </p>
 
                 {/* Department Title (Middle) */}
-                <h3 className="text-slate-900 font-extrabold text-sm sm:text-base md:text-lg mt-2 sm:mt-4 text-center select-none">
+                <h3 className={`font-extrabold text-sm sm:text-base md:text-lg mt-2 sm:mt-4 text-center select-none transition-colors duration-500 ${isActive ? theme.titleColor : "text-slate-900"
+                  }`}>
                   {dept.title}
                 </h3>
 
@@ -157,7 +234,8 @@ export default function JurusanCard() {
                     src={dept.image}
                     alt={dept.title}
                     fill
-                    className="object-contain object-bottom"
+                    className={`object-contain object-bottom transition-all duration-500 ${isActive ? theme.imageClass : ""
+                      }`}
                   />
                 </div>
               </div>
@@ -165,6 +243,13 @@ export default function JurusanCard() {
           })}
           <div className="h-120"></div>
         </div>
+      </div>
+      <div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="w-full"
+      >
+        <JurusanCarousel activeIndex={currentIndex} onSelect={setCurrentIndex} />
       </div>
     </div>
   );
