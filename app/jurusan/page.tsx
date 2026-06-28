@@ -233,14 +233,14 @@ export default function Jurusan() {
               return (
                 <div
                   key={card.id}
-                  className="jurusan-card absolute w-[160px] sm:w-[200px] md:w-[235px] h-[220px] sm:h-[270px] md:h-[315px] hover:z-50 select-none origin-bottom will-change-transform"
+                  className="rounded-xl jurusan-card absolute w-[160px] sm:w-[200px] md:w-[235px] h-[220px] sm:h-[270px] md:h-[315px] hover:z-50 select-none origin-bottom will-change-transform"
                   style={{
                     zIndex: zIndex,
                     left: "50%",
                     marginLeft: "-80px", // Half of w-[160px] to center on mobile
                   }}
                 >
-                  <Link href={`/jurusan/${card.slug}`}>
+                  <Link href={`/jelajahi-jurusan/#${card.slug}`}>
                     <div className="w-full h-full overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.12)] bg-white transition-transform duration-300 hover:scale-105 hover:-translate-y-10 cursor-pointer">
                       <Image
                         src={card.image}
@@ -267,7 +267,7 @@ export default function Jurusan() {
               </p>
 
               <Link
-                href="/#jurusan"
+                href="/jelajahi-jurusan"
                 className="bg-primary hover:bg-primary-hover text-white font-bold px-10 py-3.5 rounded-full transition-all duration-200 active:scale-[0.97] shadow-lg shadow-primary/10 hover:shadow-xl hover:shadow-primary/20 text-[15px]"
               >
                 Jelajahi Jurusan

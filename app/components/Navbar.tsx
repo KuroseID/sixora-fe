@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -22,9 +23,16 @@ export default function Navbar() {
           {/* Left Side: Brand Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl tracking-tight text-zinc-900 dark:text-white">
+              {/* <span className="text-2xl tracking-tight text-zinc-900 dark:text-white">
                 MANA LOGO NYA
-              </span>
+              </span> */}
+              <Image
+                src="/studio6.webp"
+                alt="Logo"
+                width={120}
+                height={40}
+                className="rounded-xl"
+              />
             </Link>
           </div>
 
@@ -96,8 +104,15 @@ export default function Navbar() {
           <div className="flex justify-between items-center h-16 px-6 border-b border-zinc-100 dark:border-zinc-900">
             <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
               <span className="text-lg tracking-tight text-zinc-900 dark:text-white">
-                MANA LOGO NYA
+                MENU
               </span>
+              {/* <Image
+                src="/studio6.webp"
+                alt="Logo"
+                width={120}
+                height={40}
+                className="rounded-xl"
+              /> */}
             </Link>
             <button
               onClick={() => setIsOpen(false)}
@@ -122,7 +137,7 @@ export default function Navbar() {
           </div>
 
           {/* Drawer Footer Actions */}
-          <div className="p-6 border-t border-zinc-100 dark:border-zinc-900 flex flex-col gap-3">
+          {/* <div className="p-6 border-t border-zinc-100 dark:border-zinc-900 flex flex-col gap-3">
             <Link
               href="/login"
               className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3.5 rounded-xl transition-all active:scale-[0.98] text-center shadow-md shadow-primary/10"
@@ -137,7 +152,7 @@ export default function Navbar() {
             >
               Register
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>
