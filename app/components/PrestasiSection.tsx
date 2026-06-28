@@ -98,16 +98,16 @@ export default function PrestasiSection() {
             opacity = 1;
           } else if (offset === 1) {
             // Right slide (Faded/Background)
-            positionStyle = "translate-x-[60%] sm:translate-x-[75%] md:translate-x-[90%] scale-75 z-10 opacity-40 hover:opacity-60 translate-y-[20%]";
+            positionStyle = "translate-x-[60%] sm:translate-x-[75%] md:translate-x-[90%] scale-75 z-10 translate-y-[20%]";
             transform = "rotate(4deg)";
             zIndex = 10;
-            opacity = 0.4;
+            opacity = 1;
           } else if (offset === -1) {
             // Left slide (Faded/Background)
-            positionStyle = "-translate-x-[60%] sm:-translate-x-[75%] md:-translate-x-[90%] scale-75 z-10 opacity-40 hover:opacity-60 -translate-y-[20%]";
+            positionStyle = "-translate-x-[60%] sm:-translate-x-[75%] md:-translate-x-[90%] scale-75 z-10 -translate-y-[20%]";
             transform = "rotate(-6deg)";
             zIndex = 10;
-            opacity = 0.4;
+            opacity = 1;
           } else {
             // Out of bounds slides (Hidden)
             positionStyle = "translate-x-0 scale-75 z-0 opacity-0 pointer-events-none";
@@ -138,6 +138,11 @@ export default function PrestasiSection() {
                   alt={slide.alt}
                   fill
                   className="object-cover"
+                />
+                {/* Dark overlay for inactive slides to prevent blending with the background */}
+                <div
+                  className={`absolute inset-0 bg-primary/60 hover:bg-primary/45 transition-all duration-700 ease-out ${offset === 0 ? "opacity-0 pointer-events-none" : "opacity-100"
+                    }`}
                 />
               </div>
             </div>
