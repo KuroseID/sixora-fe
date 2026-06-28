@@ -7,6 +7,7 @@ interface SlideData {
   id: number;
   src: string;
   alt: string;
+  link: string;
 }
 
 const slides: SlideData[] = [
@@ -14,26 +15,31 @@ const slides: SlideData[] = [
     id: 1,
     src: "/epim-harapan-1.webp",
     alt: "Epim Harapan 1",
+    link: "https://www.instagram.com/p/DB1yD0VzWqH/"
   },
   {
     id: 2,
     src: "/epim.webp",
     alt: "Epim",
+    link: "https://www.instagram.com/p/DBwhvjWzFss/"
   },
   {
     id: 3,
     src: "/tax.webp",
     alt: "tax",
+    link: "https://www.instagram.com/p/DCm0-cWzgJj/"
   },
   {
     id: 4,
     src: "/lks.webp",
     alt: "Lks",
+    link: "https://www.instagram.com/p/C7UoVfESqQ_/"
   },
   {
     id: 5,
     src: "/lks-1.webp",
     alt: "LKs",
+    link: "https://www.instagram.com/p/C7UoVfESqQ_/"
   },
 ];
 
@@ -115,6 +121,9 @@ export default function PrestasiSection() {
               onClick={() => {
                 if (offset === 1) nextSlide();
                 if (offset === -1) prevSlide();
+                if (offset === 0) {
+                  window.open(slide.link, "_blank", "noopener,noreferrer");
+                }
               }}
               style={{
                 zIndex: zIndex,
