@@ -58,51 +58,6 @@ const departments: Department[] = [
   }
 ];
 
-const departmentThemes = [
-  {
-    // RPL (Index 0) - Merah
-    cardBg: "bg-red-500",
-    // cardBg: "bg-[#D32725]",
-    titleColor: "text-white",
-    descColor: "text-red-100",
-    imageClass: "brightness-0 invert"
-  },
-  {
-    // DKV (Index 1) - Hitam
-    cardBg: "bg-zinc-950",
-    titleColor: "text-white",
-    descColor: "text-zinc-300",
-    imageClass: "brightness-0 invert"
-  },
-  {
-    // AK (Index 2) - Hijau
-    cardBg: "bg-green-700",
-    titleColor: "text-white",
-    descColor: "text-green-100",
-    imageClass: "brightness-0 invert"
-  },
-  {
-    // MP (Index 3) - Biru
-    cardBg: "bg-sky-600",
-    titleColor: "text-white",
-    descColor: "text-sky-100",
-    imageClass: "brightness-0 invert"
-  },
-  {
-    // BD (Index 4) - Oranye
-    cardBg: "bg-orange-600",
-    titleColor: "text-white",
-    descColor: "text-orange-100",
-    imageClass: "brightness-0 invert"
-  },
-  {
-    // KKBT (Index 5) - Coklat
-    cardBg: "bg-amber-900",
-    titleColor: "text-white",
-    descColor: "text-amber-100",
-    imageClass: "brightness-0 invert"
-  }
-];
 
 export default function JurusanCard() {
   const router = useRouter();
@@ -201,8 +156,6 @@ export default function JurusanCard() {
             if (offset > Math.floor(total / 2)) offset -= total;
 
             const styleClass = getCardStyles(offset);
-            const isActive = offset === 0;
-            const theme = departmentThemes[index];
 
             return (
               <div
@@ -214,18 +167,15 @@ export default function JurusanCard() {
                     router.push(`/jurusan/${dept.slug}`);
                   }
                 }}
-                className={`p-6 sm:p-8 pt-8 sm:pt-10 absolute w-full h-auto rounded-tr-4xl rounded-tl-4xl flex flex-col items-center justify-start overflow-hidden transition-all duration-500 ease-in-out ${isActive ? theme.cardBg : "bg-white"
-                  } ${styleClass}`}
+                className={`p-6 sm:p-8 pt-8 sm:pt-10 absolute w-full h-auto bg-white rounded-tr-4xl rounded-tl-4xl flex flex-col items-center justify-start overflow-hidden transition-all duration-500 ease-in-out ${styleClass}`}
               >
                 {/* Department Description (Top) */}
-                <p className={`text-xs sm:text-sm md:text-base leading-relaxed text-center font-medium line-clamp-6 select-none transition-colors duration-500 ${isActive ? theme.descColor : "text-slate-500"
-                  }`}>
+                <p className="text-slate-500 text-xs sm:text-sm md:text-base leading-relaxed text-center font-medium line-clamp-6 select-none">
                   {dept.description}
                 </p>
 
                 {/* Department Title (Middle) */}
-                <h3 className={`font-extrabold text-sm sm:text-base md:text-lg mt-2 sm:mt-4 text-center select-none transition-colors duration-500 ${isActive ? theme.titleColor : "text-slate-900"
-                  }`}>
+                <h3 className="text-slate-900 font-extrabold text-sm sm:text-base md:text-lg mt-2 sm:mt-4 text-center select-none">
                   {dept.title}
                 </h3>
 
@@ -234,8 +184,7 @@ export default function JurusanCard() {
                     src={dept.image}
                     alt={dept.title}
                     fill
-                    className={`object-contain object-bottom transition-all duration-500 ${isActive ? theme.imageClass : ""
-                      }`}
+                    className="object-contain object-bottom"
                   />
                 </div>
               </div>
