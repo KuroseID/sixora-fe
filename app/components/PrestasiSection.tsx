@@ -71,7 +71,7 @@ export default function PrestasiSection() {
     >
       {/* Background Image Overlay */}
       <div
-        className="absolute inset-0 pointer-events-none select-none z-0 bg-[url('/prestasi-bg.webp')] bg-[size:auto_100%] bg-center bg-no-repeat"
+        className="absolute inset-0 pointer-events-none select-none z-0 bg-[url('/prestasi-bg.svg')] bg-[size:auto_100%] bg-center bg-no-repeat"
       />
 
       {/* Main 3D Card Stack Slider Container */}

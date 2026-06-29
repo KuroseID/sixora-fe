@@ -1,0 +1,24 @@
+<svg width="2037" height="577" viewBox="0 0 2037 577" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_187_42)">
+<rect width="2037" height="577" fill="#65C4FF"/>
+<path d="M1018 191.892C1298.87 191.892 1553.06 247.94 1736.95 338.467C1920.97 429.057 2034 553.829 2034 691.033C2034 828.238 1920.97 953.01 1736.95 1043.6C1553.06 1134.13 1298.87 1190.17 1018 1190.17C737.126 1190.17 482.941 1134.13 299.049 1043.6C115.028 953.01 2 828.238 2 691.033C2.0001 553.829 115.028 429.057 299.049 338.467C482.941 247.94 737.126 191.892 1018 191.892Z" stroke="white" stroke-opacity="0.23" stroke-width="4"/>
+<line x1="4" y1="-4" x2="36.7433" y2="-4" transform="matrix(-0.866026 0.5 -0.5 -0.866025 1273.3 74.0938)" stroke="white" stroke-opacity="0.83" stroke-width="8" stroke-linecap="round"/>
+<line x1="1263.46" y1="104.767" x2="1254.99" y2="73.1398" stroke="white" stroke-opacity="0.83" stroke-width="8" stroke-linecap="round"/>
+<ellipse cx="1836.94" cy="175.919" rx="115.245" ry="115.245" fill="white" fill-opacity="0.08"/>
+<ellipse cx="1836.94" cy="175.919" rx="75.9264" ry="75.9262" fill="white" fill-opacity="0.18"/>
+<ellipse cx="1836.94" cy="173.207" rx="40.6748" ry="40.6748" fill="white" fill-opacity="0.18"/>
+<ellipse cx="186.834" cy="62.4218" rx="148.422" ry="148.422" fill="white" fill-opacity="0.08"/>
+<ellipse cx="186.836" cy="62.4234" rx="97.7839" ry="97.7838" fill="white" fill-opacity="0.18"/>
+<ellipse cx="186.838" cy="58.9281" rx="52.3842" ry="52.3842" fill="white" fill-opacity="0.18"/>
+<ellipse cx="186.834" cy="62.4218" rx="148.422" ry="148.422" fill="white" fill-opacity="0.08"/>
+<ellipse cx="186.836" cy="62.4234" rx="97.7839" ry="97.7838" fill="white" fill-opacity="0.18"/>
+<ellipse cx="186.838" cy="58.9281" rx="52.3842" ry="52.3842" fill="white" fill-opacity="0.18"/>
+<path d="M688.125 132.771C693.818 133.729 696.339 140.491 692.662 144.942L658.952 185.76C655.275 190.211 648.158 189.013 646.141 183.603L627.648 134C625.632 128.591 630.227 123.026 635.921 123.985L688.125 132.771Z" stroke="white"/>
+<path d="M714.899 122.29C720.592 123.248 723.113 130.01 719.437 134.462L685.726 175.279C682.049 179.731 674.932 178.532 672.916 173.122L654.423 123.52C652.406 118.11 657.002 112.546 662.695 113.504L714.899 122.29Z" stroke="white"/>
+</g>
+<defs>
+<clipPath id="clip0_187_42">
+<rect width="2037" height="577" fill="white"/>
+</clipPath>
+</defs>
+</svg>

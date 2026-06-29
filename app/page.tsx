@@ -184,7 +184,7 @@ export default function Home() {
               <div className="lg:col-span-7 flex justify-center lg:justify-start w-full">
                 <div className="relative w-full max-w-[680px]">
                   <Image
-                    src="/about-image.webp"
+                    src="/about-image.svg"
                     alt="SMK Negeri 6 Jember"
                     height={576}
                     width={681}

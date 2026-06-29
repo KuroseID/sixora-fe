@@ -104,7 +104,7 @@ export default function JurusanCard() {
       >
         {/* Background Image Overlay */}
         <div
-          className="absolute inset-0 pointer-events-none select-none z-0 bg-[url('/jurusan-bg.webp')] bg-[size:auto_100%] bg-center bg-no-repeat mix-blend-overlay"
+          className="absolute inset-0 pointer-events-none select-none z-0 bg-[url('/jurusan-bg.svg')] bg-[size:auto_100%] bg-center bg-no-repeat"
         />
 
         {/* Top-Right "Lihat Selengkapnya" Link aligned with max-w-7xl */}
