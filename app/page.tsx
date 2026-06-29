@@ -24,14 +24,19 @@ export default function Home() {
                 {/* Wave Hero Background Image */}
                 <div className="absolute inset-0 pointer-events-none select-none z-0">
                   <div className="max-w-7xl mx-auto h-full w-full relative px-6 lg:px-8">
-                    <div className="absolute -left-26 lg:-left-10 h-full w-[150%] lg:w-[50%]">
-                      <Image
-                        src="/hero-wave.png"
-                        alt="Wave background decoration"
-                        fill
-                        priority
-                        className="object-contain object-left-bottom"
-                      />
+                    <div className="absolute -left-26 lg:-left-10 -bottom-26 lg:-bottom-24 h-full w-[150%] lg:w-[50%] flex items-end">
+                      <svg
+                        viewBox="0 0 651 515"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-full h-auto max-h-[90%]"
+                      >
+                        <path
+                          d="M177.773 256.056C125.416 329.474 0 403.556 0 403.556V641.556C0 641.556 125.542 542.223 220.339 509.056C316.554 475.393 417.881 556.853 479.237 475.556C530.904 407.097 434.481 329.207 479.237 256.056C517.05 194.252 611.895 224.871 635.978 156.556C656.832 97.4005 662.667 2.90632 599.922 0.0560811C554.138 -2.02374 551.646 54.2886 512.788 78.5561C422.984 134.642 319.694 43.1898 244.376 117.556C201.648 159.744 212.628 207.181 177.773 256.056Z"
+                          fill="#65C4FF"
+                          fillOpacity="0.12"
+                        />
+                      </svg>
                     </div>
                   </div>
                 </div>
