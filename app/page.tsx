@@ -168,7 +168,7 @@ export default function Home() {
             <div className="max-w-7xl mx-auto h-full w-full relative">
               <div className="absolute lg:-top-2/3 lg:left-[40%]  h-full w-[30%]">
                 <Image
-                  src="/about-floating-triangle.webp"
+                  src="/about-floating-triangle.svg"
                   alt="Wave background decoration"
                   fill
                   priority
@@ -329,6 +329,28 @@ export default function Home() {
           </div>
 
           <PPDBSection />
+        </div>
+
+        <div className="bg-primary/6 py-16">
+          <div id="virtual-tour" className="w-full flex flex-col items-center scroll-mt-16">
+            <div className="text-center px-6 max-w-4xl mx-auto mb-12 relative z-10">
+              <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
+                Berita
+              </div>
+              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+                Berita Terkini <span className="text-primary">SMKN 6 Jember</span>
+              </h2>
+              <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                Nikmati pengalaman berkeliling lingkungan sekolah secara virtual melalui tampilan 360°. Kenali setiap sudut sekolah, fasilitas, dan area pembelajaran dengan mudah dari mana saja.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative overflow-hidden">
+            <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24 bg-gray-300 h-[600px]">
+              {/* <h1 className="h-full text-center font-black text-5xl">VIRTUAL 360°</h1> */}
+            </main>
+          </div>
         </div>
 
         <div className="bg-white py-16">

@@ -34,13 +34,13 @@ export default function Navbar() {
     <div className="fixed top-0 inset-x-0 z-50 w-full transition-all duration-300">
       {/* Full-width blur background layer */}
       <div
-        className={`absolute inset-x-0 top-0 h-22 transition-all duration-500 -z-10 pointer-events-none ${isScrolled
+        className={`absolute inset-x-0 top-0 h-24 transition-all duration-500 -z-10 pointer-events-none ${isScrolled
           ? "bg-white/40 dark:bg-zinc-950/40 backdrop-blur-md opacity-100"
           : "bg-transparent backdrop-blur-none border-transparent opacity-0"
           }`}
       />
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
         <nav className={`w-full rounded-full px-6 lg:px-8 transition-all duration-300 ${isScrolled
           ? "bg-white/90 dark:bg-zinc-950/90 border border-zinc-100 dark:border-zinc-900 shadow-[0_10px_30px_rgba(0,0,0,0.06)]"
           : "bg-transparent border-transparent shadow-none"
