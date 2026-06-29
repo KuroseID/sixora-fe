@@ -233,21 +233,21 @@ export default function Jurusan() {
               return (
                 <div
                   key={card.id}
-                  className="rounded-xl jurusan-card absolute w-[160px] sm:w-[200px] md:w-[235px] h-[220px] sm:h-[270px] md:h-[315px] hover:z-50 select-none origin-bottom will-change-transform"
+                  className="rounded-2xl jurusan-card absolute w-[160px] sm:w-[200px] md:w-[235px] h-[220px] sm:h-[270px] md:h-[315px] hover:z-50 select-none origin-bottom will-change-transform"
                   style={{
                     zIndex: zIndex,
                     left: "50%",
                     marginLeft: "-80px", // Half of w-[160px] to center on mobile
                   }}
                 >
-                  <Link href={`/jelajahi-jurusan/#${card.slug}`}>
-                    <div className="w-full h-full overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.12)] bg-white transition-transform duration-300 hover:scale-105 hover:-translate-y-10 cursor-pointer">
+                  <Link href={`/jelajahi-jurusan/#${card.slug}`} className="block w-full h-full">
+                    <div className="w-full h-full rounded-2xl overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.12)] bg-white transition-transform duration-300 transform-gpu hover:scale-105 hover:-translate-y-10 cursor-pointer">
                       <Image
                         src={card.image}
                         alt={`${card.name} Poster`}
                         fill
                         priority
-                        className="object-cover"
+                        className="object-cover scale-101"
                       />
                     </div>
                   </Link>
