@@ -41,12 +41,12 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black text-slate-900 leading-[1.5] font-bold relative z-10">
+                {/* <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-slate-900 leading-[1.5] font-bold relative z-10">
                 Wujudkan Masa <br />
                 Depanmu <br />
                 Bersama <span className="text-primary font-black">Sixora</span>
               </h1> */}
-                <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black text-slate-900 leading-[1.5] font-bold relative z-10">
+                <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-slate-900 leading-[1.5] font-bold relative z-10">
                   Selamat Datang di <br />
                   <span className="text-primary font-black">SMKN 6 Jember</span>
                 </h1>
@@ -212,7 +212,7 @@ export default function Home() {
                 </div>
 
                 <div className="relative">
-                  <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-[1.5] font-bold">
+                  <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-bold text-slate-900 leading-[1.5] font-bold">
                     Mengenal <br />
                     <span className="text-primary font-black font-bold">SMKN 6 JEMBER</span>
                   </h2>
@@ -245,7 +245,7 @@ export default function Home() {
               <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
                 Virtual Tour
               </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-bold text-slate-900 leading-tight">
                 Jelajahi Sekolah Kami
               </h2>
               <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
@@ -266,7 +266,7 @@ export default function Home() {
             <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
               Program Keahlian
             </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+            <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-bold text-slate-900 leading-tight">
               Jurusan & Unggulan
             </h2>
             <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
@@ -282,7 +282,7 @@ export default function Home() {
               <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
                 Prestasi
               </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-bold text-slate-900 leading-tight">
                 Prestasi & Pencapaian
               </h2>
               <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
@@ -300,7 +300,7 @@ export default function Home() {
               <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
                 Kemitraan Industri
               </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-bold text-slate-900 leading-tight">
                 Mitra Industri <br />
                 <span className="text-primary">SMK NEGERI 6 JEMBER</span>
               </h2>
@@ -319,7 +319,7 @@ export default function Home() {
               <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
                 Penerimaan Peserta Didik Baru
               </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-bold text-slate-900 leading-tight">
                 PPDB <span className="text-primary">2026</span>
               </h2>
               <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
@@ -337,7 +337,7 @@ export default function Home() {
               <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
                 Berita
               </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-bold text-slate-900 leading-tight">
                 Berita Terkini <span className="text-primary">SMKN 6 Jember</span>
               </h2>
               <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
@@ -359,7 +359,7 @@ export default function Home() {
               <div className="inline-flex items-center justify-center px-5 py-2 bg-primary/10 text-primary text-[13px] font-bold rounded-full mb-5">
                 FAQ
               </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-black text-slate-900 leading-tight">
+              <h2 className="text-3xl sm:text-5xl lg:text-[42px] font-bold text-slate-900 leading-tight">
                 Pertanyaan yang Sering Diajukan
               </h2>
               <p className="mt-6 text-base sm:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
