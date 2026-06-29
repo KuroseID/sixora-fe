@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import PageTransitionLoader from "@/app/components/PageTransitionLoader";
 import { Suspense } from "react";
+import Chatbot from "@/app/components/Chatbot";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -35,6 +36,7 @@ export default function RootLayout({
         </Suspense>
         {/* <Navbar /> */}
         {children}
+        <Chatbot />
       </body>
     </html>
   );
