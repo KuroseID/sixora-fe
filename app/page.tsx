@@ -14,8 +14,8 @@ export default function Home() {
       <Navbar />
       <div id="home" className="flex flex-col w-full bg-white scroll-mt-16">
         {/* Hero Section Wrapper */}
-        <div className="relative overflow-hidden bg-primary/5 w-full">
-          <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24">
+        <div className="relative overflow-hidden bg-primary/15 w-full">
+          <main className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pt-20">
 
             <div className="grid grid-cols-1 lg:grid-cols-12 items-center relative z-10">
 
@@ -24,7 +24,7 @@ export default function Home() {
                 {/* Wave Hero Background Image */}
                 <div className="absolute inset-0 pointer-events-none select-none z-0">
                   <div className="max-w-7xl mx-auto h-full w-full relative px-6 lg:px-8">
-                    <div className="absolute -bottom-25 -left-26 lg:-left-10 h-full w-[150%] lg:w-[60%]">
+                    <div className="absolute -left-26 lg:-left-10 h-full w-[150%] lg:w-[50%]">
                       <Image
                         src="/hero-wave.png"
                         alt="Wave background decoration"
@@ -102,8 +102,22 @@ export default function Home() {
         </div>
 
         {/* Stats Section */}
-        <section className="w-full bg-white relative z-10 py-6">
-          <div className="max-w-7xl mx-auto">
+        <section className="w-full bg-white md:bg-primary/15 relative z-10 py-6 overflow-hidden">
+          {/* White panel on the left ending with a wavy SVG curve */}
+          <div className="absolute left-0 top-0 bottom-0 bg-white w-[92%] sm:w-[88%] md:w-[78%] lg:w-[68%] xl:w-[calc((100vw-1280px)/2+660px)] z-0 hidden md:block">
+            <svg
+              viewBox="0 0 58 116"
+              preserveAspectRatio="none"
+              className="absolute top-0 bottom-0 left-[calc(100%-29px)] h-full w-[58px]"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="29" cy="29" r="29" fill="white" />
+              <circle cx="29" cy="87" r="29" fill="#E9F7FF" />
+            </svg>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div className="flex flex-row justify-between items-center text-center max-w-xl">
 
               {/* Stat 1: Jurusan */}
