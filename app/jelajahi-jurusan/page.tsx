@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function JelajahiJurusan() {
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-zinc-950 font-sans transition-colors duration-300">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-zinc-950 font-sans transition-colors duration-300 pt-20">
 
       {/* Hero Banner Section */}
       <div className="w-full max-w-7xl mx-auto">

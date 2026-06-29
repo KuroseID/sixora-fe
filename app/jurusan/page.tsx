@@ -202,7 +202,7 @@ export default function Jurusan() {
 
   return (
     <>
-      <div className="w-full bg-white text-slate-900 h-[calc(100vh-64px)] flex flex-col justify-between overflow-hidden">
+      <div className="w-full bg-white text-slate-900 h-[calc(100vh-64px)] flex flex-col justify-between overflow-hidden pt-20">
 
         {/* Animation container */}
         <section
