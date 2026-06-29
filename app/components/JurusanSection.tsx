@@ -18,42 +18,42 @@ const departments: Department[] = [
     title: "Rekayasa Perangkat Lunak",
     shortName: "RPL",
     description: "Mempelajari pengembangan perangkat lunak, website, aplikasi mobile, dan basis data dengan pendekatan berbasis proyek untuk mencetak talenta digital yang siap kerja dan berdaya saing.",
-    image: "/Union.webp",
+    image: "/banner/M-RPL.webp",
     slug: "rpl"
   },
   {
     title: "Desain Komunikasi Visual",
     shortName: "DKV",
     description: "Mengembangkan kreativitas di bidang videografi, fotografi, desain grafis, ilustrasi, dan media digital interaktif untuk menghasilkan karya seni visual yang bernilai tinggi.",
-    image: "/Union.webp",
+    image: "/banner/M-DKV.webp",
     slug: "dkv"
   },
   {
     title: "Akuntansi & Keuangan Lembaga",
-    shortName: "AKL",
+    shortName: "AK",
     description: "Membekali siswa dengan keterampilan akuntansi keuangan, administrasi pajak, perbankan, dan aplikasi keuangan komputer untuk kebutuhan industri modern.",
-    image: "/Union.webp",
+    image: "/banner/M-AK.webp",
     slug: "ak"
   },
   {
     title: "Manajemen Perkantoran",
     shortName: "MPLB",
     description: "Mempelajari pengelolaan administrasi perkantoran, manajemen kearsipan, komunikasi bisnis, dan pelayanan pelanggan berbasis teknologi digital.",
-    image: "/Union.webp",
+    image: "/banner/M-MP.webp",
     slug: "mp"
   },
   {
-    title: "Pemasaran & Bisnis Digital",
-    shortName: "PM",
+    title: "Bisnis Digital",
+    shortName: "BD",
     description: "Mempelajari strategi bisnis digital, pemasaran ritel, pengelolaan media sosial bisnis, serta analisis pasar untuk mencetak wirausahawan mandiri.",
-    image: "/Union.webp",
+    image: "/banner/M-BD.webp",
     slug: "bd"
   },
   {
     title: "Kriya Kreatif Batik & Tekstil",
     shortName: "KKBT",
     description: "Melestarikan budaya bangsa melalui pembelajaran teknik membatik, desain tekstil, tenun, sablon, serta pembuatan produk kriya kreatif bernilai estetis.",
-    image: "/Union.webp",
+    image: "/banner/M-KKBT.webp",
     slug: "kkbt"
   }
 ];

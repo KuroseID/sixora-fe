@@ -50,11 +50,11 @@ export default function Navbar() {
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center gap-2">
                 <Image
-                  src="/studio6.webp"
+                  src="/tefa.webp"
                   alt="Logo"
                   width={120}
-                  height={40}
-                  className="rounded-xl h-8 sm:h-9 w-auto object-contain"
+                  height={120}
+                  className="rounded-xl h-22 w-auto object-contain"
                 />
               </Link>
             </div>

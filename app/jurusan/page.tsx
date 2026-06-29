@@ -240,7 +240,7 @@ export default function Jurusan() {
                     marginLeft: "-80px", // Half of w-[160px] to center on mobile
                   }}
                 >
-                  <Link href={`/jelajahi-jurusan/#${card.slug}`} className="block w-full h-full">
+                  <Link href={`/jurusan/${card.slug}`} className="block w-full h-full">
                     <div className="w-full h-full rounded-2xl overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.12)] bg-white transition-transform duration-300 transform-gpu hover:scale-105 hover:-translate-y-10 cursor-pointer">
                       <Image
                         src={card.image}

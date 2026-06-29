@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-export default function JelajahiJurusan() {
+export default function JurusanRPL() {
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-zinc-950 font-sans transition-colors duration-300 pt-20">
 
       {/* Hero Banner Section */}
-      {/* <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         <div className="relative w-full overflow-hidden shadow-md">
           <Image
             src="/banner/RPL-BANNER-BESAR.webp"
@@ -16,7 +16,7 @@ export default function JelajahiJurusan() {
             className="w-full h-auto object-cover"
           />
         </div>
-      </div> */}
+      </div>
 
       {/* RPL Department Detail Section */}
       <main className="flex-1 w-full">
@@ -25,7 +25,7 @@ export default function JelajahiJurusan() {
           className="scroll-mt-24 relative overflow-hidden bg-white dark:bg-zinc-900 p-8 md:p-12 lg:p-16 "
         >
           {/* Background Pattern */}
-          <div className="absolute inset-0 w-full max-w-7xl scale-100 lg:scale-110 mx-auto h-full pointer-events-none select-none z-0 pt-5 lg:pt-10">
+          <div className="absolute inset-0 w-full max-w-7xl scale-100 lg:scale-110 mx-auto h-full pointer-events-none select-none z-0 pt-5 lg:pt-20">
             <Image
               src="/jurusan-rpl-bg.webp"
               alt="RPL Background Pattern"
@@ -51,7 +51,7 @@ export default function JelajahiJurusan() {
               </div>
 
               {/* Title */}
-              <h2 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-white uppercase mt-4 mb-6 leading-tight select-none tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-zinc-900 dark:text-white uppercase mt-4 mb-6 leading-tight select-none tracking-tight">
                 REKAYASA PERANGKAT LUNAK
               </h2>
 
@@ -60,8 +60,11 @@ export default function JelajahiJurusan() {
                 Program Keahlian Rekayasa Perangkat Lunak (RPL) di SMKN 6 Jember merupakan salah satu konsentrasi pada Program Keahlian Pengembangan Perangkat Lunak dan Gim (PPLG) yang membekali peserta didik dengan kemampuan merancang, membuat, mengembangkan, menguji, hingga memelihara perangkat lunak sesuai standar industri. Program ini dirancang untuk mencetak lulusan yang kompeten, kreatif, inovatif, dan siap menghadapi kebutuhan dunia kerja maupun melanjutkan pendidikan di bidang teknologi informasi.
               </p>
 
+              {/* Divider Line */}
+              <hr className="border-t border-zinc-200 dark:border-zinc-800 mb-8" />
+
               {/* Info Grid (Kompetensi Keahlian & Peluang Karir) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 pt-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12">
 
                 {/* Kompetensi Keahlian */}
                 <div>

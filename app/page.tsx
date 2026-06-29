@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import LogoCarousel from "@/app/components/LogoCarousel";
 import JurusanSection from "@/app/components/JurusanSection";
 import Navbar from "@/app/components/Navbar";
 import MitraIndustriSection from "@/app/components/MitraIndustriSection";
@@ -25,7 +24,7 @@ export default function Home() {
                 {/* Wave Hero Background Image */}
                 <div className="absolute inset-0 pointer-events-none select-none z-0">
                   <div className="max-w-7xl mx-auto h-full w-full relative px-6 lg:px-8">
-                    <div className="absolute -bottom-5 lg:-bottom-25 -left-6 lg:-left-10 h-full w-full lg:w-[60%]">
+                    <div className="absolute -bottom-25 -left-26 lg:-left-10 h-full w-[150%] lg:w-[60%]">
                       <Image
                         src="/hero-wave.png"
                         alt="Wave background decoration"
@@ -102,7 +101,38 @@ export default function Home() {
           </main>
         </div>
 
-        <LogoCarousel />
+        {/* Stats Section */}
+        <section className="w-full bg-white relative z-10 py-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-row justify-between items-center text-center max-w-xl">
+
+              {/* Stat 1: Jurusan */}
+              <div className="flex-1 flex flex-col items-center justify-center">
+                <span className="text-4xl font-bold text-[#02033A] leading-none">6</span>
+                <span className="mt-3 text-xs sm:text-sm font-bold text-slate-800">Jurusan</span>
+              </div>
+
+              {/* Divider */}
+              <div className="h-20 w-px bg-slate-200" />
+
+              {/* Stat 2: Siswa Aktif */}
+              <div className="flex-1 flex flex-col items-center justify-center py-2">
+                <span className="text-4xl font-bold text-[#02033A] leading-none">500+</span>
+                <span className="mt-3 text-xs sm:text-sm font-bold text-slate-800">Siswa Aktif</span>
+              </div>
+
+              {/* Divider */}
+              <div className="h-20 w-px bg-slate-200" />
+
+              {/* Stat 3: Alumni */}
+              <div className="flex-1 flex flex-col items-center justify-center">
+                <span className="text-4xl font-bold text-[#02033A] leading-none">1000+</span>
+                <span className="mt-3 text-xs sm:text-sm font-bold text-slate-800">Alumni</span>
+              </div>
+
+            </div>
+          </div>
+        </section>
 
         <div className="relative overflow-hidden bg-white w-full">
           {/* <div className="absolute top-12 left-[1/2] w-[180px] sm:w-[240px] md:w-[280px] h-auto opacity-25 pointer-events-none select-none z-0">
